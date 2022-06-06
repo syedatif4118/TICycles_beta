@@ -290,13 +290,12 @@
         android:layout_marginTop="10dp">
 
         <TextView
+            android:id="@+id/hotwater"
             android:layout_width="0dp"
             android:layout_height="55dp"
-            android:textSize="17dp"
-            android:text="Hot water rinse process"
             android:layout_weight="0.8"
-            android:id="@+id/hotwater"
-            />
+            android:text="Hot water rinse process"
+            android:textSize="17dp" />
 
         <View
             android:layout_width="0dp"
@@ -591,6 +590,7 @@
             android:textSize="17dp"
             android:text="Water rinse4 dip"
             android:layout_weight="0.8"
+            android:id="@+id/rinse_4"
             />
 
         <View
@@ -613,6 +613,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_11"
             />
 
 
@@ -630,6 +631,7 @@
             android:textSize="17dp"
             android:text="DM water dip"
             android:layout_weight="0.8"
+            android:id="@+id/water_dip"
             />
 
         <View
@@ -652,6 +654,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_12"
 
             />
 
@@ -670,6 +673,7 @@
             android:textSize="17dp"
             android:text="ED Process"
             android:layout_weight="0.8"
+            android:id="@+id/ed_process"
             />
 
         <View
@@ -692,6 +696,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_13"
 
             />
 
@@ -710,6 +715,7 @@
             android:textSize="17dp"
             android:text="Ultra filtration spray "
             android:layout_weight="0.8"
+            android:id="@+id/filteration_spray"
             />
 
         <View
@@ -732,6 +738,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_14"
 
             />
 
@@ -750,6 +757,7 @@
             android:textSize="17dp"
             android:text="Ultra filtration Dip "
             android:layout_weight="0.8"
+            android:id="@+id/filtration_dip"
             />
 
         <View
@@ -772,6 +780,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_15"
 
             />
 
@@ -798,6 +807,7 @@
             android:textSize="17dp"
             android:text="Sanding process "
             android:layout_weight="0.8"
+            android:id="@+id/sanding_process"
             />
 
         <View
@@ -820,6 +830,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_16"
 
             />
 
@@ -837,6 +848,7 @@
             android:textSize="17dp"
             android:text="Sealer process"
             android:layout_weight="0.8"
+            android:id="@+id/sealer_process"
             />
 
         <View
@@ -859,6 +871,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_17"
 
             />
 
@@ -874,8 +887,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:textSize="17dp"
-            android:text="Tack  Rag wipping process"
+            android:text="Tack Rag wipping process"
             android:layout_weight="0.8"
+            android:id="@+id/tack_rag"
             />
 
         <View
@@ -898,6 +912,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_18"
 
             />
 
@@ -915,6 +930,7 @@
             android:textSize="17dp"
             android:text="Top Coat Robo spray"
             android:layout_weight="0.8"
+            android:id="@+id/robo_spray"
             />
 
         <View
@@ -937,6 +953,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_19"
 
             />
 
@@ -954,6 +971,7 @@
             android:textSize="17dp"
             android:text="Top Coat Manual Spray"
             android:layout_weight="0.8"
+            android:id="@+id/manual_spray"
             />
 
         <View
@@ -976,6 +994,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_20"
 
             />
 
@@ -1002,6 +1021,7 @@
             android:textSize="17dp"
             android:text="Chassis Head Cup Pressing"
             android:layout_weight="0.8"
+            android:id="@+id/head_cup"
             />
 
         <View
@@ -1024,6 +1044,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_21"
 
             />
 
@@ -1039,8 +1060,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:textSize="17dp"
-            android:text="Vin Puncher Number Application"
+            android:text="Vin Punching Number Application"
             android:layout_weight="0.8"
+            android:id="@+id/vpunch_appno"
             />
 
         <View
@@ -1063,6 +1085,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_22"
 
             />
 
@@ -1080,6 +1103,7 @@
             android:textSize="17dp"
             android:text="Wiring harness"
             android:layout_weight="0.8"
+            android:id="@+id/wiring"
             />
 
         <View
@@ -1102,6 +1126,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_23"
 
             />
 
@@ -1119,6 +1144,7 @@
             android:textSize="17dp"
             android:text="Hand brake cable routing"
             android:layout_weight="0.8"
+            android:id="@+id/hand_brake"
             />
 
         <View
@@ -1141,6 +1167,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_24"
 
             />
 
@@ -1158,6 +1185,7 @@
             android:textSize="17dp"
             android:text="Hydraulic brake hose"
             android:layout_weight="0.8"
+            android:id="@+id/hydraulic_brake"
             />
 
         <View
@@ -1180,6 +1208,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_25"
 
             />
 
@@ -1197,6 +1226,7 @@
             android:textSize="17dp"
             android:text="Routing"
             android:layout_weight="0.8"
+            android:id="@+id/routing"
             />
 
         <View
@@ -1219,6 +1249,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_26"
 
             />
 
@@ -1234,8 +1265,9 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:textSize="17dp"
-            android:text="Shock Absorber assembly and Rigid axle assembly "
+            android:text="Shock absorber assembly and rigid axle assembly"
             android:layout_weight="0.8"
+            android:id="@+id/shock_absorber"
             />
 
         <View
@@ -1258,6 +1290,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_27"
 
             />
 
@@ -1275,6 +1308,7 @@
             android:textSize="17dp"
             android:text="Unloding of the chassis from the under body conveyor "
             android:layout_weight="0.8"
+            android:id="@+id/unloadin_chasis"
             />
 
         <View
@@ -1297,6 +1331,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_28"
 
             />
 
@@ -1314,6 +1349,7 @@
             android:textSize="17dp"
             android:text="Controller Fixing "
             android:layout_weight="0.8"
+            android:id="@+id/control_fixing"
             />
 
         <View
@@ -1336,6 +1372,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_29"
 
             />
 
@@ -1353,6 +1390,7 @@
             android:textSize="17dp"
             android:text="Converter  Fixing"
             android:layout_weight="0.8"
+            android:id="@+id/converter_fixing"
             />
 
         <View
@@ -1375,6 +1413,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_30"
 
             />
 
@@ -1392,6 +1431,7 @@
             android:textSize="17dp"
             android:text="Small Aux battery assembly"
             android:layout_weight="0.8"
+            android:id="@+id/small_aux"
             />
 
         <View
@@ -1414,6 +1454,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_31"
 
             />
 
@@ -1431,6 +1472,7 @@
             android:textSize="17dp"
             android:text="Main battery assembly"
             android:layout_weight="0.8"
+            android:id="@+id/main_battery"
             />
 
         <View
@@ -1453,6 +1495,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_32"
 
             />
 
@@ -1470,6 +1513,7 @@
             android:textSize="17dp"
             android:text="Tail gate assembly"
             android:layout_weight="0.8"
+            android:id="@+id/tail_gate"
             />
 
         <View
@@ -1492,6 +1536,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_33"
 
             />
 
@@ -1509,6 +1554,7 @@
             android:textSize="17dp"
             android:text="Rear mudguard assembly LH"
             android:layout_weight="0.8"
+            android:id="@+id/rear_LH"
             />
 
         <View
@@ -1531,6 +1577,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_34"
 
             />
 
@@ -1548,6 +1595,7 @@
             android:textSize="17dp"
             android:text="Rear mudguard assembly RH "
             android:layout_weight="0.8"
+            android:id="@+id/rear_RH"
             />
 
         <View
@@ -1570,6 +1618,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_35"
 
             />
 
@@ -1587,6 +1636,7 @@
             android:textSize="17dp"
             android:text="Foot Pedal "
             android:layout_weight="0.8"
+            android:id="@+id/foot_pedal"
             />
 
         <View
@@ -1609,6 +1659,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_36"
 
             />
 
@@ -1626,6 +1677,7 @@
             android:textSize="17dp"
             android:text="Hydraulic cylinder assembly"
             android:layout_weight="0.8"
+            android:id="@+id/cylinder"
             />
 
         <View
@@ -1648,6 +1700,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_37"
 
             />
 
@@ -1665,6 +1718,7 @@
             android:textSize="17dp"
             android:text="Brake hose connection"
             android:layout_weight="0.8"
+            android:id="@+id/brake_hose"
             />
 
         <View
@@ -1687,6 +1741,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_38"
 
             />
 
@@ -1704,6 +1759,7 @@
             android:textSize="17dp"
             android:text="Brake Oil Filling "
             android:layout_weight="0.8"
+            android:id="@+id/brake_oil"
             />
 
         <View
@@ -1726,6 +1782,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_39"
 
             />
 
@@ -1743,6 +1800,7 @@
             android:textSize="17dp"
             android:text="Driver Floor Sheet Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/driver_floor"
             />
 
         <View
@@ -1765,6 +1823,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_40"
 
             />
 
@@ -1782,6 +1841,7 @@
             android:textSize="17dp"
             android:text="Parking Lever Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/parking_lever"
             />
 
         <View
@@ -1804,6 +1864,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_41"
 
             />
 
@@ -1821,6 +1882,7 @@
             android:textSize="17dp"
             android:text="Foot Pedal Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/foot_pedal_assem"
             />
 
         <View
@@ -1843,6 +1905,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_42"
 
             />
 
@@ -1860,6 +1923,7 @@
             android:textSize="17dp"
             android:text="Windshield Panel Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/windshield"
             />
 
         <View
@@ -1882,6 +1946,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_43"
 
             />
 
@@ -1899,6 +1964,7 @@
             android:textSize="17dp"
             android:text="Horn Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/horn_asem"
             />
 
         <View
@@ -1921,6 +1987,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_44"
 
             />
 
@@ -1938,6 +2005,7 @@
             android:textSize="17dp"
             android:text="Ignition Lock"
             android:layout_weight="0.8"
+            android:id="@+id/ignition_lock"
             />
 
         <View
@@ -1960,6 +2028,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_45"
 
             />
 
@@ -1975,8 +2044,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:textSize="17dp"
-            android:text="Fork  Assembly"
+            android:text="Fork Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/fork_assem"
             />
 
         <View
@@ -1999,6 +2069,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_46"
 
             />
 
@@ -2016,6 +2087,7 @@
             android:textSize="17dp"
             android:text="Rear wheel assembly"
             android:layout_weight="0.8"
+            android:id="@+id/rear_wheel"
             />
 
         <View
@@ -2038,6 +2110,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_47"
 
             />
 
@@ -2055,6 +2128,7 @@
             android:textSize="17dp"
             android:text="Brake Cable Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/brake_cable"
             />
 
         <View
@@ -2077,6 +2151,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_48"
 
             />
 
@@ -2089,12 +2164,12 @@
         android:layout_marginTop="10dp">
 
         <TextView
+            android:id="@+id/front_mud"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:textSize="17dp"
-            android:text="Front mudguard assembly "
             android:layout_weight="0.8"
-            />
+            android:text="Front mudguard assembly "
+            android:textSize="17dp" />
 
         <View
             android:layout_width="0dp"
@@ -2116,6 +2191,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_49"
 
             />
 
@@ -2133,6 +2209,7 @@
             android:textSize="17dp"
             android:text="Wiper motor assembly"
             android:layout_weight="0.8"
+            android:id="@+id/wiper"
             />
 
         <View
@@ -2155,6 +2232,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_50"
 
             />
 
@@ -2172,6 +2250,7 @@
             android:textSize="17dp"
             android:text="Wiring harness cable tie "
             android:layout_weight="0.8"
+            android:id="@+id/wiring_harness"
             />
 
         <View
@@ -2194,47 +2273,13 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_51"
 
             />
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:textSize="17dp"
-            android:text="Horn assembly "
-            android:layout_weight="0.8"
-            />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.01"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-
-            />
 
 
     </LinearLayout>
@@ -2250,6 +2295,7 @@
             android:textSize="17dp"
             android:text="Relay assembly"
             android:layout_weight="0.8"
+            android:id="@+id/relay"
             />
 
         <View
@@ -2272,6 +2318,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_52"
 
             />
 
@@ -2289,6 +2336,7 @@
             android:textSize="17dp"
             android:text="Wind shield panel assembly"
             android:layout_weight="0.8"
+            android:id="@+id/windshield_panel"
             />
 
         <View
@@ -2311,6 +2359,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_53"
 
             />
 
@@ -2328,6 +2377,7 @@
             android:textSize="17dp"
             android:text="Top cladding assembly  "
             android:layout_weight="0.8"
+            android:id="@+id/top_cladding"
             />
 
         <View
@@ -2350,6 +2400,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_54"
 
             />
 
@@ -2367,6 +2418,7 @@
             android:textSize="17dp"
             android:text="Dashboard assembly "
             android:layout_weight="0.8"
+            android:id="@+id/dashboard"
             />
 
         <View
@@ -2389,6 +2441,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_55"
 
             />
 
@@ -2406,6 +2459,7 @@
             android:textSize="17dp"
             android:text="Handle Bar Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/handlebar"
             />
 
         <View
@@ -2428,6 +2482,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_56"
 
             />
 
@@ -2445,6 +2500,7 @@
             android:textSize="17dp"
             android:text="Partition Wall Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/partition"
             />
 
         <View
@@ -2467,6 +2523,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_57"
 
             />
 
@@ -2484,6 +2541,7 @@
             android:textSize="17dp"
             android:text="Spare wheel assembly "
             android:layout_weight="0.8"
+            android:id="@+id/spare_wheel"
             />
 
         <View
@@ -2506,6 +2564,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_58"
 
             />
 
@@ -2523,6 +2582,7 @@
             android:textSize="17dp"
             android:text="Driver seat frame Assembly "
             android:layout_weight="0.8"
+            android:id="@+id/driver_seat"
             />
 
         <View
@@ -2545,6 +2605,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_59"
 
             />
 
@@ -2562,6 +2623,7 @@
             android:textSize="17dp"
             android:text="Driver seat assembly "
             android:layout_weight="0.8"
+            android:id="@+id/driver_seat_assem"
             />
 
         <View
@@ -2584,6 +2646,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_60"
 
             />
 
@@ -2601,6 +2664,7 @@
             android:textSize="17dp"
             android:text="Rigid axle assembly "
             android:layout_weight="0.8"
+            android:id="@+id/rigid"
             />
 
         <View
@@ -2623,6 +2687,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_61"
 
             />
 
@@ -2640,6 +2705,7 @@
             android:textSize="17dp"
             android:text="Boat sub assembly "
             android:layout_weight="0.8"
+            android:id="@+id/boat_sub"
             />
 
         <View
@@ -2662,6 +2728,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_62"
 
             />
 
@@ -2679,6 +2746,7 @@
             android:textSize="17dp"
             android:text="Tail gate sub assembly"
             android:layout_weight="0.8"
+            android:id="@+id/tail_gate_sub"
             />
 
         <View
@@ -2701,6 +2769,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_63"
 
             />
 
@@ -2718,6 +2787,7 @@
             android:textSize="17dp"
             android:text="Master cylinder sub assembly"
             android:layout_weight="0.8"
+            android:id="@+id/master_cylinder"
             />
 
         <View
@@ -2740,6 +2810,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_64"
 
             />
 
@@ -2757,6 +2828,7 @@
             android:textSize="17dp"
             android:text=" Dash Board set sub Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/dashboard_sub"
             />
 
         <View
@@ -2779,6 +2851,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_65"
 
             />
 
@@ -2796,6 +2869,7 @@
             android:textSize="17dp"
             android:text="Wind shield  set sub Assembly "
             android:layout_weight="0.8"
+            android:id="@+id/windshield_sub"
             />
 
         <View
@@ -2818,6 +2892,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_66"
 
             />
 
@@ -2835,6 +2910,7 @@
             android:textSize="17dp"
             android:text="Sanding process "
             android:layout_weight="0.8"
+            android:id="@+id/sandin2"
             />
 
         <View
@@ -2857,6 +2933,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_67"
 
             />
 
@@ -2874,6 +2951,7 @@
             android:textSize="17dp"
             android:text="Handle bar Set Assembly"
             android:layout_weight="0.8"
+            android:id="@+id/handlebar_set"
             />
 
         <View
@@ -2896,6 +2974,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#807C7C"
             android:text="NOk"
+            android:id="@+id/nok_68"
 
             />
 

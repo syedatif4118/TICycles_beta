@@ -62,7 +62,7 @@ public class NOK_inspection extends AppCompatActivity {
             connect = connectionHelper.connectionClass();
             if (connect != null) {
                 String query = "select * from Config_Defect as Defect join Config_Inspection as Inspection on Defect.InspectionId = Inspection.InspectionId where Inspection.InspectionName ='" + inspection_name.getText().toString() + "'";
-              // String query = " select DefectName from Config_Defect as Defect join Config_Inspection as Inspection on Defect.InspectionId = Inspection.InspectionId where Inspection.InspectionName = ' REAR SIDE UPPER PANEL AND REAR WIND SHIELD PANEL'";
+              // String query = " select DefectName from Config_Defect as Defect join Config_Inspection as Inspection on Defect.InspectionId = Inspection.InspectionId where Inspection.InspectionName = 'VIN PUNCHING NUMBER APPLICATION'";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
 
