@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/border.xml" value="0.1945" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/border_2.xml" value="0.1945" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/border_3.xml" value="0.1945" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/spinner_border.xml" value="0.1945" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/textholder.xml" value="0.1945" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/a.xml" value="0.4083333333333333" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_barcode_scan.xml" value="0.25" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_defect_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_genealogy.xml" value="0.25" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_geneology.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_inspection.xml" value="0.25" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_nok_inspection.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/fragment_first.xml" value="0.16" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/layout_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/list_genealogy.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/listview_defect.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/temp.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

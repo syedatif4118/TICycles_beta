@@ -10,9 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Inspection extends AppCompatActivity {
- Button ok_1,home_btn, nok_1,nok_2,nok_3,nok_4,nok_5,nok_6,nok_7,nok_8,nok_9,nok_10,nok_11,nok_12,nok_13,nok_14,nok_15,nok_16,nok_17,nok_18,nok_19,nok_20,nok_21,nok_22,nok_23,nok_24,nok_25,nok_26,nok_27,nok_28,nok_29,nok_30,
+ Button ok_1,rest_ok,home_btn, nok_1,nok_2,nok_3,nok_4,nok_5,nok_6,nok_7,nok_8,nok_9,nok_10,nok_11,nok_12,nok_13,nok_14,nok_15,nok_16,nok_17,nok_18,nok_19,nok_20,nok_21,nok_22,nok_23,nok_24,nok_25,nok_26,nok_27,nok_28,nok_29,nok_30,
          nok_31,nok_32,nok_33,nok_34,nok_35,nok_36,nok_37,nok_38,nok_39,nok_40,nok_41,nok_42,nok_43,nok_44,nok_45,nok_46,nok_47,nok_48,nok_49,nok_50,nok_51,nok_52,nok_53,nok_54,
          nok_55,nok_56,nok_57,nok_58,nok_59,nok_60,nok_61,nok_62,nok_63,nok_64,nok_65,nok_66,nok_67,nok_68,nok_69; //ok_2,ok_3,ok_4,ok_5,ok_6,ok_7
  TextView date,vin,serial_number_punching,boat_tight,rear,hotwater,degreasing_spray,degreasing_dip,rinse_1,rinse_2,phosphating_dip,rinse_3,rinse_4,water_dip,ed_process,
@@ -97,6 +98,7 @@ public class Inspection extends AppCompatActivity {
         windshield_sub = findViewById(R.id.windshield_sub);
         sandin2 = findViewById(R.id.sandin2);
         handlebar_set = findViewById(R.id.handlebar_set);
+        rest_ok  =findViewById(R.id.rest_ok);
 
 
 
@@ -228,6 +230,7 @@ public class Inspection extends AppCompatActivity {
         nok_11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                nok_11.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_11();
             }
         });
@@ -236,6 +239,8 @@ public class Inspection extends AppCompatActivity {
         nok_12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                nok_12.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_12();
             }
         });
@@ -244,6 +249,7 @@ public class Inspection extends AppCompatActivity {
         nok_13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                nok_13.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_13();
             }
         });
@@ -252,6 +258,8 @@ public class Inspection extends AppCompatActivity {
         nok_14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                nok_14.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_14();
             }
         });
@@ -260,6 +268,8 @@ public class Inspection extends AppCompatActivity {
         nok_15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                nok_15.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_15();
             }
         });
@@ -268,6 +278,7 @@ public class Inspection extends AppCompatActivity {
         nok_16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                nok_16.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_16();
             }
         });
@@ -276,6 +287,7 @@ public class Inspection extends AppCompatActivity {
         nok_17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                nok_17.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
                 nok_inspec_17();
             }
         });
@@ -285,6 +297,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_18();
+                nok_18.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -293,6 +306,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_19();
+                nok_19.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -301,6 +315,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_20();
+                nok_20.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -309,6 +324,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_21();
+                nok_21.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -317,6 +333,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_22();
+                nok_22.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -325,6 +342,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_23();
+                nok_23.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -333,6 +351,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_24();
+                nok_24.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -341,6 +360,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_25();
+                nok_25.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -349,6 +369,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_26();
+                nok_26.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -357,6 +378,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_27();
+                nok_27.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -365,6 +387,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_28();
+                nok_29.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         }));
 
@@ -373,6 +396,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_29();
+                nok_30.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -381,6 +405,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_30();
+                nok_30.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -389,6 +414,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_31();
+                nok_31.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -397,6 +423,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_32();
+                nok_32.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -405,6 +432,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_33();
+                nok_33.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -413,6 +441,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_34();
+                nok_34.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -421,6 +450,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_35();
+                nok_35.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -429,6 +459,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_36();
+                nok_36.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -437,6 +468,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_37();
+                nok_37.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -445,6 +477,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_38();
+                nok_38.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -453,6 +486,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_39();
+                nok_39.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -461,6 +495,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_40();
+                nok_40.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -469,6 +504,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_41();
+                nok_41.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -477,6 +513,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_42();
+                nok_42.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -485,6 +522,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_43();
+                nok_43.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -493,6 +531,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_44();
+                nok_44.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -501,6 +540,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_45();
+                nok_45.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -509,6 +549,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_46();
+                nok_46.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -517,6 +558,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_47();
+                nok_47.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -525,6 +567,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_48();
+                nok_48.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -533,6 +576,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_49();
+                nok_49.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -541,6 +585,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_50();
+                nok_50.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -549,6 +594,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_51();
+                nok_51.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -557,6 +603,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_52();
+                nok_52.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -565,6 +612,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_53();
+                nok_53.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -573,6 +621,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_54();
+                nok_54.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -581,6 +630,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_55();
+                nok_55.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -589,6 +639,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_56();
+                nok_56.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -597,6 +648,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_57();
+                nok_57.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -605,6 +657,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_58();
+                nok_58.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -613,6 +666,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_59();
+                nok_59.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -621,6 +675,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_60();
+                nok_60.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -629,6 +684,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_61();
+                nok_61.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -637,6 +693,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_62();
+                nok_62.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -645,6 +702,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_63();
+                nok_63.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -653,6 +711,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_64();
+                nok_64.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -661,6 +720,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_65();
+                nok_65.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -669,6 +729,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_66();
+                nok_66.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -677,6 +738,7 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_67();
+                nok_67.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
             }
         });
 
@@ -685,6 +747,14 @@ public class Inspection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nok_inspec_68();
+                nok_68.setBackgroundColor(getResources().getColor(R.color.nok_button_color));
+            }
+        });
+
+        rest_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
@@ -697,6 +767,17 @@ public class Inspection extends AppCompatActivity {
         send.putExtra("KEY_SEND", vin.getText().toString());
         startActivity(send);
     }
+
+    private List<Button> buttons;
+    private static final int[] BUTTON_IDS = {
+            R.id.nok_1,
+            R.id.nok_2,
+            R.id.nok_3
+
+
+    };
+
+
 //No_ok inspection 1
     private void nok_inspec_1() {
 
