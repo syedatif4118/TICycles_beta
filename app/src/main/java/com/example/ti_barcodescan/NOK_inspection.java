@@ -1,14 +1,20 @@
 package com.example.ti_barcodescan;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
@@ -16,10 +22,11 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class NOK_inspection extends AppCompatActivity {
-    Button save;
-    TextView date,vin,inspection_name;
+    Button save,info;
+    TextView date,vin,inspection_name,inspec_id,defect_id;
     Spinner spinner;
     Connection connect;
+    EditText remark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,10 @@ public class NOK_inspection extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
         String currentDateandTime = sdf.format(new Date());
         date.setText(currentDateandTime);
+        inspec_id = findViewById(R.id.inspec_id);
+        defect_id = findViewById(R.id.defect_id);
+
+        remark = findViewById(R.id.remark);
 
         //vin textview
         vin = findViewById(R.id.vin_nok);
@@ -51,6 +62,36 @@ public class NOK_inspection extends AppCompatActivity {
 
 
 
+        remark.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                get_info();
+
+            }
+        });
+
+
+        save = findViewById(R.id.save);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insert();
+                Toast.makeText(getApplicationContext(),"Added Successfully",Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+
 
     }
 
@@ -63,8 +104,11 @@ public class NOK_inspection extends AppCompatActivity {
             if (connect != null) {
                 String query = "select * from Config_Defect as Defect join Config_Inspection as Inspection on Defect.InspectionId = Inspection.InspectionId where Inspection.InspectionName ='" + inspection_name.getText().toString() + "'";
               // String query = " select DefectName from Config_Defect as Defect join Config_Inspection as Inspection on Defect.InspectionId = Inspection.InspectionId where Inspection.InspectionName = 'VIN PUNCHING NUMBER APPLICATION'";
+
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
+
+
 
                 ArrayList<String> data = new ArrayList<String>();
                 while(rs.next()){
@@ -80,6 +124,50 @@ public class NOK_inspection extends AppCompatActivity {
 
         }
         catch (Exception e){
+
+        }
+
+    }
+
+    public void get_info(){
+
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+            if (connect != null) {
+                //String query_2 = "select * from Config_Inspection where InspectionName ='" + inspection_name.getText().toString() + "'";
+                String query_2 = "select * from Config_Defect where DefectName ='" + spinner.getSelectedItem().toString() + "'";
+                Statement st_2 = connect.createStatement();
+                ResultSet rs_2 = st_2.executeQuery(query_2);
+
+                while(rs_2.next()){
+                    inspec_id.setText(rs_2.getString(1));
+                    defect_id.setText(rs_2.getString(2));
+
+                }
+            }
+        }
+        catch (Exception e){
+
+        }
+
+    }
+
+    public void insert(){
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+
+            String query_3 = "insert into DefectLog (LogTimestamp,Serial_No,InspectionId,DefectId,Status,Remarks,LastUpdatedOn) values(getdate(),'"+vin.getText()+"','"+inspec_id.getText()+"','"+defect_id.getText()+"',1,'"+remark.getText()+"',getdate())";
+           // Statement st_3 = connect.createStatement();
+            //ResultSet rs_3 = st_3.executeQuery(query_3);
+            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        }
+        catch (Exception e){
+
 
         }
 
