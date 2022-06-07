@@ -63,7 +63,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/clear"
         android:layout_marginLeft="140dp"
-        android:text="Clear"/>
+        android:text="Clear"
+        />
 
 
 

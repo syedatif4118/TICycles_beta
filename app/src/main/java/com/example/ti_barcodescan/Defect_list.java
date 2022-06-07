@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
@@ -26,8 +27,8 @@ public class Defect_list extends AppCompatActivity {
     SimpleAdapter ad;
 
     Connection connect;
-Button home_btn_dft,click;
-TextView date,vin;
+Button home_btn_dft,click,clear;
+TextView date,vin,dcol;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,8 @@ TextView date,vin;
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
         String currentDateandTime = sdf.format(new Date());
         date.setText(currentDateandTime);
+        clear = findViewById(R.id.clear);
+        dcol = findViewById(R.id.dcol_2);
 
         //vin textView
         vin = findViewById(R.id.vin_dft);
@@ -51,6 +54,13 @@ TextView date,vin;
                 home();
             }
         });
+
+      /* clear.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               clear_defetcs();
+           }
+       });*/
 
 
         click = findViewById(R.id.click);
@@ -106,7 +116,7 @@ TextView date,vin;
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
             if(connect!=null){
-                String query = "select * from Genealogy where Serial_No ='" + vin.getText().toString() +"'";
+                String query = "select * from DefectLog where Serial_No ='" + vin.getText().toString() +"'";
                 //String query = "select * from Genealogy";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
@@ -115,7 +125,7 @@ TextView date,vin;
                     Map<String,String> dtname = new HashMap<String,String>();
                     dtname.put("ActivityId",rs.getString(4));
                     dtname.put("Activity_Name",rs.getString(5));
-                    dtname.put("Activity_Value",rs.getString(6));
+                    dtname.put("Activity_Value",rs.getString(7));
 
                     data.add(dtname);
 
@@ -135,6 +145,25 @@ TextView date,vin;
 
     }
 
+    public void clear_defetcs(){
+
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+
+            String query_3 ="delete from DefectLog where DefectId = '"+dcol.getText().toString()+"'";
+            // Statement st_3 = connect.createStatement();
+            //ResultSet rs_3 = st_3.executeQuery(query_3);
+            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        }
+        catch (Exception e){
+
+
+        }
+    }
 
 
 
