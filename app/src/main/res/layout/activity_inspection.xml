@@ -86,59 +86,28 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"
+        android:layout_marginTop="10dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BODY SHOP "
+                android:layout_gravity="center"
+                android:textSize="25dp"
+                android:textStyle="bold"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Inspection Name"
-            android:textSize="20dp"
-            android:background="@drawable/border_2"
+                />
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
 
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.01"/>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="OK"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_weight="0.5"
-            android:background="@drawable/border_2"
-            />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.01"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="NOT OK"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_weight="0.5"
-            android:background="@drawable/border_2"
-            />
-
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BODY SHOP "
-        android:layout_gravity="center"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -147,39 +116,57 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/serial_number_punching"
             android:layout_width="0dp"
-            android:layout_height="75dp"
+            android:layout_height="110dp"
             android:textSize="17dp"
             android:text="Serial Number Punching and Scanning"
             android:layout_weight="0.8"
+            android:id="@+id/serial"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1001"
+            android:id="@+id/serial_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
-            android:id="@+id/ok_1"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_1"
             android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
+
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOk"
-            android:id="@+id/nok_1"
-            android:backgroundTint="#807C7C"
             android:layout_marginTop="10dp"
-            />
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
+
 
 
     </LinearLayout>
@@ -198,32 +185,49 @@
             android:layout_weight="0.8"
             android:id="@+id/boat_tight"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1002"
+            android:id="@+id/boat_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:id="@+id/ok_2"
-            android:backgroundTint="#807C7C"
-            android:layout_marginTop="20dp"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_2"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_2"
-            android:layout_marginTop="20dp"
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
+
 
 
     </LinearLayout>
@@ -243,36 +247,58 @@
             android:layout_weight="0.8"
             android:id="@+id/rear"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1003"
+            android:id="@+id/rearside_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:id="@+id/ok_3"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_3"
             android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-
-        <Button
-            android:id="@+id/nok_3"
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#807C7C"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
-            android:text="NOk" />
 
 
     </LinearLayout>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -281,6 +307,11 @@
         android:textSize="25dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
+
 
 
     <LinearLayout
@@ -297,29 +328,52 @@
             android:text="Hot water rinse process"
             android:textSize="17dp" />
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1004"
+            android:id="@+id/hotwater_id"/>
+
+
+
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_4"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_4"
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
-            />
+
 
 
     </LinearLayout>
@@ -340,29 +394,49 @@
             android:layout_weight="0.8"
             android:id="@+id/degreasing_spray"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1005"
+            android:id="@+id/spray_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_5"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOk"
-            android:id="@+id/nok_5"
-            android:backgroundTint="#807C7C"
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
+
 
 
     </LinearLayout>
@@ -381,29 +455,49 @@
             android:layout_weight="0.8"
             android:id="@+id/degreasing_dip"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1006"
+            android:id="@+id/dipping_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_6"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NOk"
-            android:id="@+id/nok_6"
-            android:backgroundTint="#807C7C"
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
+
 
 
     </LinearLayout>
@@ -423,29 +517,51 @@
             android:layout_weight="0.8"
             android:id="@+id/rinse_1"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1007"
+            android:id="@+id/industrial_id"/>
+
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_7"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_7"
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
+
+
 
 
     </LinearLayout>
@@ -462,32 +578,52 @@
             android:textSize="17dp"
             android:text="Industrial water rinse 2 Dipping process "
             android:layout_weight="0.8"
-            android:id="@+id/rinse_2"
-            />
+            android:id="@+id/rinse_2"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1008"
+            android:id="@+id/industrialdipping_id"/>
+
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_8"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_8"
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
-            />
+
 
 
     </LinearLayout>
@@ -506,31 +642,48 @@
             android:layout_weight="0.8"
             android:id="@+id/phosphating_dip"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1009"
+            android:id="@+id/phosphating_dip_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_9"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_9"
-
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -550,31 +703,48 @@
             android:id="@+id/rinse_3"
 
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1010"
+            android:id="@+id/waterrinse3_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_10"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_10"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
 
@@ -592,29 +762,48 @@
             android:layout_weight="0.8"
             android:id="@+id/rinse_4"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1011"
+            android:id="@+id/waterrinse4_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_11"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_11"
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -633,30 +822,48 @@
             android:layout_weight="0.8"
             android:id="@+id/water_dip"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1012"
+            android:id="@+id/DMwaterdip_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_12"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_12"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -675,30 +882,48 @@
             android:layout_weight="0.8"
             android:id="@+id/ed_process"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1013"
+            android:id="@+id/EDprocess_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_13"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_13"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -717,30 +942,48 @@
             android:layout_weight="0.8"
             android:id="@+id/filteration_spray"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1014"
+            android:id="@+id/ultrafilter_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_14"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_14"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -759,33 +1002,55 @@
             android:layout_weight="0.8"
             android:id="@+id/filtration_dip"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1015"
+            android:id="@+id/filterationdip_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_15"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_15"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -795,6 +1060,10 @@
         android:textSize="25dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -809,31 +1078,48 @@
             android:layout_weight="0.8"
             android:id="@+id/sanding_process"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1016"
+            android:id="@+id/sanding_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_16"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_16"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -850,31 +1136,48 @@
             android:layout_weight="0.8"
             android:id="@+id/sealer_process"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1017"
+            android:id="@+id/sealer_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_17"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_17"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -891,30 +1194,48 @@
             android:layout_weight="0.8"
             android:id="@+id/tack_rag"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1018"
+            android:id="@+id/tackrag_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_18"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_18"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -932,31 +1253,47 @@
             android:layout_weight="0.8"
             android:id="@+id/robo_spray"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1019"
+            android:id="@+id/topcoat_id"/>
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
-            android:layout_width="0dp"
+        <Switch
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:id="@+id/nok_19"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_19"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -973,33 +1310,54 @@
             android:layout_weight="0.8"
             android:id="@+id/manual_spray"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1020"
+            android:id="@+id/manual_spray_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_20"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_20"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -1008,6 +1366,10 @@
         android:textSize="25dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
+    <View
+        android:layout_height="3dip"
+        android:layout_width="match_parent"
+        android:background="#322626"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -1023,30 +1385,48 @@
             android:layout_weight="0.8"
             android:id="@+id/head_cup"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1021"
+            android:id="@+id/head_cup_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_21"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_21"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1064,30 +1444,48 @@
             android:layout_weight="0.8"
             android:id="@+id/vpunch_appno"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1022"
+            android:id="@+id/vpunch_appno_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_22"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_22"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1105,30 +1503,48 @@
             android:layout_weight="0.8"
             android:id="@+id/wiring"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1023"
+            android:id="@+id/wiring_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_23"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_23"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1146,31 +1562,48 @@
             android:layout_weight="0.8"
             android:id="@+id/hand_brake"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1024"
+            android:id="@+id/hand_brake_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_24"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_24"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1187,30 +1620,48 @@
             android:layout_weight="0.8"
             android:id="@+id/hydraulic_brake"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1025"
+            android:id="@+id/hydraulic_brake_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_25"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_25"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1228,30 +1679,48 @@
             android:layout_weight="0.8"
             android:id="@+id/routing"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1026"
+            android:id="@+id/routing_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_26"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_26"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1269,31 +1738,48 @@
             android:layout_weight="0.8"
             android:id="@+id/shock_absorber"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1027"
+            android:id="@+id/shock_absorber_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_27"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_27"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1310,31 +1796,48 @@
             android:layout_weight="0.8"
             android:id="@+id/unloadin_chasis"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1028"
+            android:id="@+id/unloadin_chasis_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_28"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_28"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1351,30 +1854,48 @@
             android:layout_weight="0.8"
             android:id="@+id/control_fixing"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1029"
+            android:id="@+id/control_fixing_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_29"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_29"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1392,32 +1913,48 @@
             android:layout_weight="0.8"
             android:id="@+id/converter_fixing"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1030"
+            android:id="@+id/converter_fixing_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_30"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_30"
-
-            />
-
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -1433,31 +1970,48 @@
             android:layout_weight="0.8"
             android:id="@+id/small_aux"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1031"
+            android:id="@+id/small_aux_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_31"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_31"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1474,30 +2028,48 @@
             android:layout_weight="0.8"
             android:id="@+id/main_battery"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1032"
+            android:id="@+id/main_battery_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_32"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_32"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1515,30 +2087,48 @@
             android:layout_weight="0.8"
             android:id="@+id/tail_gate"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1033"
+            android:id="@+id/tail_gate_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_33"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_33"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1556,31 +2146,48 @@
             android:layout_weight="0.8"
             android:id="@+id/rear_LH"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1034"
+            android:id="@+id/rear_LH_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_34"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_34"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1597,30 +2204,48 @@
             android:layout_weight="0.8"
             android:id="@+id/rear_RH"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1035"
+            android:id="@+id/rear_RH_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_35"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_35"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1638,30 +2263,48 @@
             android:layout_weight="0.8"
             android:id="@+id/foot_pedal"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1036"
+            android:id="@+id/foot_pedal_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_36"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_36"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1679,30 +2322,48 @@
             android:layout_weight="0.8"
             android:id="@+id/cylinder"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1037"
+            android:id="@+id/cylinder_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_37"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_37"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1720,30 +2381,48 @@
             android:layout_weight="0.8"
             android:id="@+id/brake_hose"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1038"
+            android:id="@+id/brake_hose_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_38"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_38"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1761,30 +2440,48 @@
             android:layout_weight="0.8"
             android:id="@+id/brake_oil"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1039"
+            android:id="@+id/brake_oil_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_39"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_39"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1802,30 +2499,48 @@
             android:layout_weight="0.8"
             android:id="@+id/driver_floor"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1040"
+            android:id="@+id/driver_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_40"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_40"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1843,31 +2558,48 @@
             android:layout_weight="0.8"
             android:id="@+id/parking_lever"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1041"
+            android:id="@+id/parking_lever_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_41"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_41"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1884,31 +2616,48 @@
             android:layout_weight="0.8"
             android:id="@+id/foot_pedal_assem"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1042"
+            android:id="@+id/foot_pedal_assem_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_42"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_42"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -1925,30 +2674,48 @@
             android:layout_weight="0.8"
             android:id="@+id/windshield"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1043"
+            android:id="@+id/windshield_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_43"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_43"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -1966,30 +2733,48 @@
             android:layout_weight="0.8"
             android:id="@+id/horn_asem"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1044"
+            android:id="@+id/horn_asem_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_44"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_44"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2007,31 +2792,48 @@
             android:layout_weight="0.8"
             android:id="@+id/ignition_lock"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1045"
+            android:id="@+id/ignition_lock_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_45"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_45"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2048,30 +2850,48 @@
             android:layout_weight="0.8"
             android:id="@+id/fork_assem"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1046"
+            android:id="@+id/fork_assem_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_46"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_46"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2089,30 +2909,48 @@
             android:layout_weight="0.8"
             android:id="@+id/rear_wheel"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1047"
+            android:id="@+id/rear_wheel_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_47"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_47"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2130,31 +2968,48 @@
             android:layout_weight="0.8"
             android:id="@+id/brake_cable"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1068"
+            android:id="@+id/brake_cable_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_48"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_48"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2170,30 +3025,48 @@
             android:layout_weight="0.8"
             android:text="Front mudguard assembly "
             android:textSize="17dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1048"
+            android:id="@+id/front_mud_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_49"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_49"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2211,30 +3084,48 @@
             android:layout_weight="0.8"
             android:id="@+id/wiper"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1049"
+            android:id="@+id/wiper_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_50"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_50"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2252,30 +3143,48 @@
             android:layout_weight="0.8"
             android:id="@+id/wiring_harness"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1050"
+            android:id="@+id/wiring_harness_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_51"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_51"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
 
@@ -2297,31 +3206,48 @@
             android:layout_weight="0.8"
             android:id="@+id/relay"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1052"
+            android:id="@+id/relay_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_52"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_52"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2338,30 +3264,48 @@
             android:layout_weight="0.8"
             android:id="@+id/windshield_panel"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1053"
+            android:id="@+id/windshield_panel_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_53"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_53"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2379,31 +3323,48 @@
             android:layout_weight="0.8"
             android:id="@+id/top_cladding"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1054"
+            android:id="@+id/top_cladding_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_54"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_54"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2420,30 +3381,48 @@
             android:layout_weight="0.8"
             android:id="@+id/dashboard"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1055"
+            android:id="@+id/dashboard_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_55"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_55"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2461,31 +3440,48 @@
             android:layout_weight="0.8"
             android:id="@+id/handlebar"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1056"
+            android:id="@+id/handlebar_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_56"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_56"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2502,31 +3498,48 @@
             android:layout_weight="0.8"
             android:id="@+id/partition"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1057"
+            android:id="@+id/partition_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_57"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_57"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2543,30 +3556,48 @@
             android:layout_weight="0.8"
             android:id="@+id/spare_wheel"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1058"
+            android:id="@+id/spare_wheel_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_58"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_58"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2584,31 +3615,48 @@
             android:layout_weight="0.8"
             android:id="@+id/driver_seat"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1059"
+            android:id="@+id/driver_seat_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_59"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_59"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2625,30 +3673,48 @@
             android:layout_weight="0.8"
             android:id="@+id/driver_seat_assem"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1060"
+            android:id="@+id/driver_seat_assem_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_60"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_60"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2666,31 +3732,48 @@
             android:layout_weight="0.8"
             android:id="@+id/rigid"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1061"
+            android:id="@+id/rigid_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_61"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_61"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2707,30 +3790,48 @@
             android:layout_weight="0.8"
             android:id="@+id/boat_sub"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1062"
+            android:id="@+id/boat_sub_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_62"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_62"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2748,30 +3849,48 @@
             android:layout_weight="0.8"
             android:id="@+id/tail_gate_sub"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1063"
+            android:id="@+id/tail_gate_sub_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_63"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_63"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2789,31 +3908,48 @@
             android:layout_weight="0.8"
             android:id="@+id/master_cylinder"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1064"
+            android:id="@+id/master_cylinder_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_64"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_64"
-
-            />
-
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
     </LinearLayout>
     <LinearLayout
@@ -2830,30 +3966,48 @@
             android:layout_weight="0.8"
             android:id="@+id/dashboard_sub"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1065"
+            android:id="@+id/dashboard_sub_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_65"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_65"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2871,74 +4025,52 @@
             android:layout_weight="0.8"
             android:id="@+id/windshield_sub"
             />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.01"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_66"
-
-            />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-
         <TextView
             android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:textSize="17dp"
-            android:text="Sanding process "
-            android:layout_weight="0.8"
-            android:id="@+id/sandin2"
-            />
+            android:layout_height="0dp"
+            android:text="1066"
+            android:id="@+id/windshield_sub_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_66"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_67"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -2953,30 +4085,48 @@
             android:layout_weight="0.8"
             android:id="@+id/handlebar_set"
             />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1067"
+            android:id="@+id/handlebar_set_id"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"/>
-        <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.02"/>
+        <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:text="OK"
-            android:backgroundTint="#807C7C"
+            android:layout_weight="0.01"/>
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nok_68"
+            android:layout_marginTop="10dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:thumbTint="@color/ok_button_color"
+            android:trackTint="@color/nok_button_color"
             />
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05" />
-        <Button
+            android:layout_weight="0.01"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#807C7C"
-            android:text="NOk"
-            android:id="@+id/nok_68"
-
-            />
+            android:layout_marginTop="10dp"
+            android:text="NOK"
+            android:textSize="17dp"
+            android:layout_weight="0.02"/>
 
 
     </LinearLayout>
@@ -2992,35 +4142,32 @@
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         >
-
-        <Button
-            android:id="@+id/rest_ok"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Rest Ok"
-            android:backgroundTint="#1E69A5"
-            android:layout_weight="0.5"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.1" />
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="save"
+            android:id="@+id/ins_save"
             android:backgroundTint="#1BCA16"
-            android:layout_weight="0.5"/>
+            android:layout_weight="1"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.01" />
+            android:layout_weight="0.3" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="home"
-            android:layout_weight="0.15"
+            android:layout_weight="0.4"
             android:id="@+id/home_btn_ins"
             />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
 
 
     </LinearLayout>

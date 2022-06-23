@@ -9,12 +9,12 @@ android:gravity="center"
 android:orientation="vertical"
 tools:context=".MainActivity">
 
-<ImageView
-    android:layout_width="325dp"
-    android:layout_height="325dp"
-    android:layout_gravity="center"
-    android:maxWidth="10dp"
-    android:src="@drawable/tiindia" />
+    <ImageView
+        android:layout_width="396dp"
+        android:layout_height="472dp"
+        android:layout_gravity="center"
+        android:maxWidth="10dp"
+        android:src="@drawable/montra" />
 
 
 </LinearLayout>

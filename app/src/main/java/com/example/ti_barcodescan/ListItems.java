@@ -6,11 +6,11 @@ import java.sql.Connection;
 
 public class ListItems {
 
-        TextView vin;
+    TextView vin;
 
-        Connection connect;
-        String ConnectionResult="";
-        Boolean isSuccess=false;
+    Connection connect;
+    String ConnectionResult = "";
+    Boolean isSuccess = false;
 
 
        /* public List<Map<String,String>> getlist(){
@@ -54,5 +54,5 @@ public class ListItems {
             return data;
 
         }*/
-    }
+}
 

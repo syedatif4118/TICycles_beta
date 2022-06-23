@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TI_BarcodeScan</string>
+    <string name="app_name">EOL_App</string>
     <string name="title_activity_inspection">Inspection</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
