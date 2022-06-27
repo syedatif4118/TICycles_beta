@@ -3,16 +3,21 @@ package com.example.ti_barcodescan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
@@ -24,52 +29,49 @@ import java.util.Map;
 
 public class Defect_list extends AppCompatActivity {
 
-    SimpleAdapter ad;
+    // SimpleAdapter ad;
+    ListView defect_listview;
+    ImageView trash;
+
 
     Connection connect;
-Button home_btn_dft,click,clear;
-TextView date,vin,dcol;
+    Button home_btn_dft, click, clear;
+    TextView date, vin, dcol;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_defect_list);
 
         date = findViewById(R.id.date_dft);
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
         String currentDateandTime = sdf.format(new Date());
         date.setText(currentDateandTime);
-        clear = findViewById(R.id.clear);
+        // clear = findViewById(R.id.clear);
+        //trash = findViewById(R.id.trash);
         dcol = findViewById(R.id.dcol_2);
+        defect_listview = findViewById(R.id.defect_listview);
 
         //vin textView
         vin = findViewById(R.id.vin_dft);
-        Intent receive  = getIntent();
+        Intent receive = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SENDER");
         vin.setText(receiveValue);
 
         home_btn_dft = findViewById(R.id.home_btn_dft);
-       home_btn_dft.setOnClickListener(new View.OnClickListener() {
+        home_btn_dft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 home();
             }
         });
 
-      /* clear.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               clear_defetcs();
-           }
-       });*/
 
-
+        ListAdapter adap = GetdefectList();
         click = findViewById(R.id.click);
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GetdefectList();
-            }
-        });
+
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -78,57 +80,82 @@ TextView date,vin,dcol;
             }
         }, 1000);
 
+
     }
 
+
     private void home() {
-        Intent send = new Intent(Defect_list.this,BarcodeScan.class);
+        Intent send = new Intent(Defect_list.this, BarcodeScan.class);
         send.putExtra("KEY_SEND", vin.getText().toString());
         startActivity(send);
 
     }
 
 
+    public ListAdapter GetdefectList() {
+        ArrayList<Integer> pos = new ArrayList<>();
 
-    public void GetdefectList()
-
-    {
         ListView listView = (ListView) findViewById(R.id.defect_listview);
         List<Map<String, String>> MyDataList = getdefectlist();
-        // ListItems mydata = new ListItems();
-        //MyDataList = mydata.getlist();
-        //  MyDataList.get(getlist());
 
-        String[] f = {"ActivityId", "Activity_Name", "Activity_Value"};
-        int[] i = {R.id.dcol_1, R.id.dcol_2, R.id.dcol_3};
-        ad = new SimpleAdapter(Defect_list.this, MyDataList, R.layout.listview_defect, f, i);
+        String[] f = {"ActivityId", "Activity_Name", "Activity_Value", "Button"};
+        int[] i = {R.id.dcol_1, R.id.dcol_2, R.id.dcol_3, R.id.clear_1};
+        SimpleAdapter ad;
+        final int[] popo = {0};
+//         ad = new SimpleAdapter(Defect_list.this, MyDataList, R.layout.listview_defect, f, i);
+        ad = new SimpleAdapter(this, MyDataList, R.layout.listview_defect, f, i) {
+
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View v = super.getView(position, convertView, parent);
+               // clear = v.findViewById(R.id.clear);
+               // clear.setOnClickListener(arg0 -> {
+
+                clear = v.findViewById(R.id.clear_1);
+                clear.setText("Clear");
+                clear.setOnClickListener(arg0 -> {
+                    // TODO Auto-generated method stub
+                    ListAdapter add = listView.getAdapter();
+                    listView.setAdapter(add);
+                        Log.e("here", MyDataList.get(position).get("Activity_Name"));
+                        String d = MyDataList.get(position).get("Activity_Name");
+                        Boolean j = clear_defects("Update DefectLog set Status = 1 where DefectId =" + d + "");
+                        MyDataList.remove(position);
+                    Toast.makeText(Defect_list.this, "Cleared", Toast.LENGTH_SHORT).show();
+                });
+
+                return v;
+            }
+        };
         listView.setAdapter(ad);
+        ad.notifyDataSetChanged();
 
+
+        return listView.getAdapter();
     }
 
-    public List<Map<String, String>> getdefectlist(){
+
+    public List<Map<String, String>> getdefectlist() {
 
 
-
-        List<Map<String,String>> data = null;
-        data = new ArrayList<Map<String,String>>();
-        try{
+        List<Map<String, String>> data = null;
+        data = new ArrayList<Map<String, String>>();
+        try {
 
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
-            if(connect!=null){
-                String query = "select * from DefectLog where Serial_No ='" + vin.getText().toString() +"'";
-                //String query = "select * from Genealogy";
+            if (connect != null) {
+                String query = "select * from DefectLog where Serial_No ='" + vin.getText().toString() + "' and Status = 2";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
-                while(rs.next())
-                {
-                    Map<String,String> dtname = new HashMap<String,String>();
-                    dtname.put("ActivityId",rs.getString(4));
-                    dtname.put("Activity_Name",rs.getString(5));
-                    dtname.put("Activity_Value",rs.getString(7));
+                while (rs.next()) {
+                    Map<String, String> dtname = new HashMap<String, String>();
+                    dtname.put("ActivityId", rs.getString(4));
+                    dtname.put("Activity_Name", rs.getString(5));
+                    dtname.put("Activity_Value", rs.getString(7));
 
                     data.add(dtname);
-
 
 
                 }
@@ -137,38 +164,34 @@ TextView date,vin,dcol;
             }
 
 
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
 
         }
         return data;
 
     }
 
-    public void clear_defetcs(){
-
+    public Boolean clear_defects(String Query) {
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
 
-            String query_3 ="delete from DefectLog where DefectId = '"+dcol.getText().toString()+"'";
-            // Statement st_3 = connect.createStatement();
-            //ResultSet rs_3 = st_3.executeQuery(query_3);
-            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
-            preparedStatement.executeUpdate();
-            preparedStatement.close();
+            String sqlinsert = Query;
+            Statement st = connect.createStatement();
+            boolean rs = st.execute(sqlinsert);
+
+            return rs;
+//            String query_3 = Query;
+//            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+//            preparedStatement.executeUpdate();
+//            preparedStatement.close();
+
+        } catch (Exception e) {
+
 
         }
-        catch (Exception e){
-
-
-        }
+        return null;
     }
-
-
-
-
-
 
 
 }

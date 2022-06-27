@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -27,12 +28,13 @@ import java.util.Date;
 
 public class NOK_inspection extends AppCompatActivity {
     Button save, info;
-    TextView date, vin, inspection_name, inspec_id, defect_id;
-    Spinner spinner;
+    TextView date, vin, inspection_name, inspec_id, defect_id,reworktype_id;
+    Spinner spinner,spinner_2;
     Connection connect;
     EditText remark;
     SaveToDefectLog saveToDefectLog;
     ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class NOK_inspection extends AppCompatActivity {
         date.setText(currentDateandTime);
         inspec_id = findViewById(R.id.inspec_id);
         defect_id = findViewById(R.id.defect_id);
-
+        reworktype_id = findViewById(R.id.reworktype_id);
         remark = findViewById(R.id.remark);
 
         //vin textview
@@ -55,6 +57,12 @@ public class NOK_inspection extends AppCompatActivity {
         /*Intent receive  = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SENDER");
         vin.setText(receiveValue);*/
+
+        spinner_2  =(Spinner) findViewById(R.id.spinner_2);
+       ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rework, android.R.layout.simple_spinner_item);
+       adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+       spinner_2.setAdapter(adapter);
+
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -102,6 +110,8 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
+
+
     public void FillSpinner() {
 
 
@@ -140,10 +150,18 @@ public class NOK_inspection extends AppCompatActivity {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
             if (connect != null) {
-                //String query_2 = "select * from Config_Inspection where InspectionName ='" + inspection_name.getText().toString() + "'";
+                String query_1 = "select * from Rework_Type where ReworkTypeName ='"+spinner_2.getSelectedItem().toString()+"'";
                 String query_2 = "select * from Config_Defect where DefectName ='" + spinner.getSelectedItem().toString() + "'";
+
+                Statement st_1 = connect.createStatement();
+                ResultSet rs_1 = st_1.executeQuery(query_1);
+
                 Statement st_2 = connect.createStatement();
                 ResultSet rs_2 = st_2.executeQuery(query_2);
+
+                while(rs_1.next()){
+                    reworktype_id.setText(rs_1.getString(1));
+                }
 
                 while (rs_2.next()) {
                     inspec_id.setText(rs_2.getString(1));
@@ -191,6 +209,24 @@ public class NOK_inspection extends AppCompatActivity {
     }
 
 
+    public void Assign_reworkbay_sp(){
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+
+            String query_3 = "Exec [dbo].[AssignReworkBay] '"+vin.getText().toString()+"', '"+reworktype_id.getText().toString()+"'";
+            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (Exception e) {
+            Log.e("msg","ERRORE");
+
+        }
+
+    }
+
+
 
     private class  SaveToDefectLog extends AsyncTask<String, Void, String> {
 
@@ -209,6 +245,7 @@ public class NOK_inspection extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             insert();
+            Assign_reworkbay_sp();
 
         }
     }

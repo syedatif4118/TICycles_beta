@@ -70,6 +70,7 @@
         android:id="@+id/scantxt"
         android:cursorVisible="false"
         android:gravity="center"
+        android:maxLength="20"
         />
 
 

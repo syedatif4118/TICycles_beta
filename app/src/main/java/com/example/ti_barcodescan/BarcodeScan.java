@@ -4,6 +4,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -12,6 +15,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,6 +25,7 @@ public class BarcodeScan extends AppCompatActivity {
     EditText scantxt;
     TextView date;
     ProgressDialog progressDialog;
+    Connection connect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +45,14 @@ public class BarcodeScan extends AppCompatActivity {
 
 
         date = findViewById(R.id.date);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm  ");
         String currentDateandTime = sdf.format(new Date());
         date.setText(currentDateandTime);
 
         genealogy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 genealogy();
-
-
             }
         });
 
@@ -77,6 +80,25 @@ public class BarcodeScan extends AppCompatActivity {
         Intent receive = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SEND");
         scantxt.setText(receiveValue);
+
+
+        scantxt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                clear_reworkbay_sp();
+
+            }
+        });
 
 
     }
@@ -138,6 +160,25 @@ public class BarcodeScan extends AppCompatActivity {
 
         progress();
     }
+
+    public void clear_reworkbay_sp(){
+
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+
+            String query_3 = "Exec [dbo].[ClearReworkBay] '"+scantxt.getText().toString()+"'";
+            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+
+        } catch (Exception e) {
+            Log.e("msg","ERRORE");
+
+        }
+    }
+
+
 
 }
 

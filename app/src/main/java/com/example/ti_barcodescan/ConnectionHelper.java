@@ -9,11 +9,13 @@ import java.sql.DriverManager;
 
 public class ConnectionHelper {
     Connection con;
-    String uname, pass, database,port, ip;
+    String uname, pass, database, port, ip;
+
     @SuppressLint("NewApi")
 
-    public  Connection connectionClass(){
-        ip = "192.168.0.108";
+    public Connection connectionClass() {
+       // ip = "192.168.0.108";
+        ip = "192.168.119.57";
         uname = "atif";
         pass = "atif";
         port = "1433";
@@ -27,17 +29,15 @@ public class ConnectionHelper {
         try {
 
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            ConnectionURL= "jdbc:jtds:sqlserver://"+ ip + ":"+ port+";"+ "databasename="+ database+";user="+uname+";password="+pass+";";
+            ConnectionURL = "jdbc:jtds:sqlserver://" + ip + ":" + port + ";" + "databasename=" + database + ";user=" + uname + ";password=" + pass + ";";
             connection = DriverManager.getConnection(ConnectionURL);
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             Log.e("Error", ex.getMessage());
 
         }
 
 
-
-       return connection;
+        return connection;
 
 
     }
