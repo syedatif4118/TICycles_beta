@@ -58,6 +58,7 @@
         android:text="Vehicle Inspection"
         android:layout_gravity="center"
         android:textSize="30dp"
+        android:textStyle="bold"
         />
 
     <LinearLayout
@@ -306,7 +307,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        />
     <View
         android:layout_height="3dip"
         android:layout_width="match_parent"
@@ -1059,7 +1060,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        />
     <View
         android:layout_height="3dip"
         android:layout_width="match_parent"
@@ -1365,7 +1366,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+         />
     <View
         android:layout_height="3dip"
         android:layout_width="match_parent"

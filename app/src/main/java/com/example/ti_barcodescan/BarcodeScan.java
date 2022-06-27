@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class BarcodeScan extends AppCompatActivity {
     Button genealogy_btn, inspection_btn, defect_btn, logout_btn, clear_btn;
@@ -39,15 +38,43 @@ public class BarcodeScan extends AppCompatActivity {
         defect_btn = findViewById(R.id.defect_btn);
         logout_btn = findViewById(R.id.logout_btn);
         clear_btn = findViewById(R.id.clear_btn);
-
         scantxt = findViewById(R.id.scantxt);
         scantxt.requestFocus();
 
 
         date = findViewById(R.id.date);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm  ");
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long datet = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+                                String dateString = sdf.format(datet);
+                                date.setText(dateString);
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+
+                }
+            }
+        };
+        t.start();
+
+
+
+
+
+     // old date time format
+       /* SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm  ");
         String currentDateandTime = sdf.format(new Date());
-        date.setText(currentDateandTime);
+        date.setText(currentDateandTime);*/
 
         genealogy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,4 +208,5 @@ public class BarcodeScan extends AppCompatActivity {
 
 
 }
+
 

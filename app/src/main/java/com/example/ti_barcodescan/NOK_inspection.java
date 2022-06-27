@@ -24,7 +24,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class NOK_inspection extends AppCompatActivity {
     Button save, info;
@@ -44,9 +43,7 @@ public class NOK_inspection extends AppCompatActivity {
         setContentView(R.layout.activity_nok_inspection);
         inspection_name = findViewById(R.id.inspection_name);
         date = findViewById(R.id.date_nok);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
-        String currentDateandTime = sdf.format(new Date());
-        date.setText(currentDateandTime);
+
         inspec_id = findViewById(R.id.inspec_id);
         defect_id = findViewById(R.id.defect_id);
         reworktype_id = findViewById(R.id.reworktype_id);
@@ -54,9 +51,7 @@ public class NOK_inspection extends AppCompatActivity {
 
         //vin textview
         vin = findViewById(R.id.vin_nok);
-        /*Intent receive  = getIntent();
-        String receiveValue = receive.getStringExtra("KEY_SENDER");
-        vin.setText(receiveValue);*/
+
 
         spinner_2  =(Spinner) findViewById(R.id.spinner_2);
        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rework, android.R.layout.simple_spinner_item);
@@ -106,6 +101,32 @@ public class NOK_inspection extends AppCompatActivity {
             }
 
         });
+
+
+        //date and time text view
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long datet = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+                                String dateString = sdf.format(datet);
+                                date.setText(dateString);
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+
+                }
+            }
+        };
+        t.start();
 
 
     }

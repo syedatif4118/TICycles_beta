@@ -22,7 +22,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,11 +45,6 @@ public class Defect_list extends AppCompatActivity {
         setContentView(R.layout.activity_defect_list);
 
         date = findViewById(R.id.date_dft);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
-        String currentDateandTime = sdf.format(new Date());
-        date.setText(currentDateandTime);
-        // clear = findViewById(R.id.clear);
-        //trash = findViewById(R.id.trash);
         dcol = findViewById(R.id.dcol_2);
         defect_listview = findViewById(R.id.defect_listview);
 
@@ -59,6 +53,31 @@ public class Defect_list extends AppCompatActivity {
         Intent receive = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SENDER");
         vin.setText(receiveValue);
+
+        //date and time
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long datet = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+                                String dateString = sdf.format(datet);
+                                date.setText(dateString);
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+
+                }
+            }
+        };
+        t.start();
 
         home_btn_dft = findViewById(R.id.home_btn_dft);
         home_btn_dft.setOnClickListener(new View.OnClickListener() {

@@ -18,17 +18,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Inspection extends AppCompatActivity {
-    private static final int[] BUTTON_IDS = {
-            R.id.nok_1,
-            R.id.nok_2,
-            R.id.nok_3
 
-
-    };
-    Button rest_ok, home_btn,save;
+    Button  home_btn,save;
     ProgressDialog progressDialog;
     SaveToDatabase saveToDatabase;
     Connection connect;
@@ -40,7 +33,7 @@ public class Inspection extends AppCompatActivity {
          nok_31, nok_32, nok_33, nok_34, nok_35, nok_36, nok_37, nok_38, nok_39, nok_40, nok_41, nok_42, nok_43, nok_44, nok_45, nok_46, nok_47, nok_48, nok_49, nok_50, nok_51, nok_52, nok_53, nok_54,
          nok_55, nok_56, nok_57, nok_58, nok_59, nok_60, nok_61, nok_62, nok_63, nok_64, nok_65, nok_66, nok_67, nok_68;
 
-    TextView date, vin, serial_number_punching,serialnumber_id, boat_tight,boat_id, rear,rear_id, hotwater,hotwater_id, degreasing_spray,degreasing_spray_id, degreasing_dip,degreasing_dip_id, rinse_1,rinse_1_id, rinse_2,rinse_2_id, phosphating_dip,phosphating_id, rinse_3,rinse_3_id, rinse_4,rinse_4_id, water_dip,water_dip_id, ed_process,ed_process_id,
+    TextView date_ins, vin, serial_number_punching,serialnumber_id, boat_tight,boat_id, rear,rear_id, hotwater,hotwater_id, degreasing_spray,degreasing_spray_id, degreasing_dip,degreasing_dip_id, rinse_1,rinse_1_id, rinse_2,rinse_2_id, phosphating_dip,phosphating_id, rinse_3,rinse_3_id, rinse_4,rinse_4_id, water_dip,water_dip_id, ed_process,ed_process_id,
             filteration_spray,filteration_spray_id, filteratin_dip,filteration_dip_id, sanding_process,sanding_process_id, sealer_process,sealer_process_id, tack_rag,tack_rag_id, robo_spray,robo_spray_id, manual_spray,manual_spray_id, head_cup,head_cup_id, vpunch_no,vpunch_no_id, wiring,wiring_id, hand_brake,hand_brake_id, hydraulic,hydraulic_id, routing,routing_id,
             shock_absorber,shock_absorber_id, unloading_chassis,unloading_chasis_id, control_fixing,control_fixing_id, converter_fixing,converter_fixing_id, small_aux,small_aux_id, main_battery,main_battery_id, tail_gate,tail_gate_id, rear_LH,rear_LH_id, rear_RH,rear_RH_id, foot_pedal,foot_pedal_id, cylinder,cylinder_id, brake_hose,brake_hose_id, brake_oil,brake_oil_id,
             driver_floor,driver_id, parking_lever,parking_lever_id, foot_pedal_assem,foot_pedal_assem_id, windshield,windshield_id, horn_assem,horn_assem_id, ignition_lock,ignition_lock_id, fork_assem,fork_assem_id, rear_wheel,rear_wheel_id, brake_cable,brake_cable_id, front_mud,front_mud_id, wiper,wiper_id, wiring_harness,wiring_harness_id, relay,relay_id, windshield_panel,windshield_panel_id,
@@ -203,10 +196,31 @@ public class Inspection extends AppCompatActivity {
 
 
         //Date and Time
-        date = findViewById(R.id.date_ins);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
-        String currentDateandTime = sdf.format(new Date());
-        date.setText(currentDateandTime);
+        date_ins = findViewById(R.id.date_ins);
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long datet = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+                                String dateString = sdf.format(datet);
+                                date_ins.setText(dateString);
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+
+                }
+            }
+        };
+        t.start();
+
 
         //Home Button
         home_btn.setOnClickListener(new View.OnClickListener() {

@@ -18,7 +18,6 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,11 +42,29 @@ public class Genealogy extends AppCompatActivity {
 
         //Date and Time
         Gdate = findViewById(R.id.date_gen);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm ");
-        String currentDateandTime = sdf.format(new Date());
-        Gdate.setText(currentDateandTime);
-        // Date date = Calendar.getInstance().getTime();
-        //Gdate.setText(date.toString());
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(1000);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                long datet = System.currentTimeMillis();
+                                SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+                                String dateString = sdf.format(datet);
+                                Gdate.setText(dateString);
+                            }
+                        });
+                    }
+
+                } catch (Exception e) {
+
+                }
+            }
+        };
+        t.start();
 
         // vin number textview
         vin = findViewById(R.id.vin);
