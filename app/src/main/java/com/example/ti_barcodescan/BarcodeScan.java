@@ -41,7 +41,7 @@ public class BarcodeScan extends AppCompatActivity {
         scantxt = findViewById(R.id.scantxt);
         scantxt.requestFocus();
 
-
+// Date and Time
         date = findViewById(R.id.date);
         Thread t = new Thread() {
             @Override
@@ -69,13 +69,7 @@ public class BarcodeScan extends AppCompatActivity {
 
 
 
-
-
-     // old date time format
-       /* SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm  ");
-        String currentDateandTime = sdf.format(new Date());
-        date.setText(currentDateandTime);*/
-
+// Genealogy OnClick
         genealogy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,6 +77,7 @@ public class BarcodeScan extends AppCompatActivity {
             }
         });
 
+// Inspection OnClick
         inspection_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,6 +85,7 @@ public class BarcodeScan extends AppCompatActivity {
             }
         });
 
+// Clear OnClick
         clear_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +93,7 @@ public class BarcodeScan extends AppCompatActivity {
             }
         });
 
+// Defect list OnClick
         defect_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,11 +101,20 @@ public class BarcodeScan extends AppCompatActivity {
             }
         });
 
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout();
+            }
+        });
+
+
+
         Intent receive = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SEND");
         scantxt.setText(receiveValue);
 
-
+// Edit Text Vin Number Scan Operation while scan
         scantxt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -134,8 +140,7 @@ public class BarcodeScan extends AppCompatActivity {
     //Genealogy Button
 
     private void genealogy() {
-        // Intent intent = new Intent(BarcodeScan.this,Genealogy.class);
-        //startActivity(intent);
+
         Bundle bundle = new Bundle();
         Intent send = new Intent(BarcodeScan.this, Genealogy.class);
         send.putExtra("KEY_SENDER", scantxt.getText().toString());
@@ -145,6 +150,8 @@ public class BarcodeScan extends AppCompatActivity {
 
 
     }
+
+// Progress Dialog
     public void progress(){
         progressDialog = new ProgressDialog(BarcodeScan.this);
         progressDialog.show();
@@ -161,33 +168,38 @@ public class BarcodeScan extends AppCompatActivity {
 
     }
 
+// Inspection Button
     private void inspection() {
-        //Intent intent = new Intent(BarcodeScan.this,Inspection.class);
-        //startActivity(intent);
+
 
         Intent send = new Intent(BarcodeScan.this, Inspection.class);
         send.putExtra("KEY_SENDER", scantxt.getText().toString());
         startActivity(send);
         progress();
 
-
-
     }
 
+    private void logout(){
+        Intent send = new Intent(BarcodeScan.this, Login.class);
+        startActivity(send);
+        finish();
+    }
+
+// Clear Button
     private void clear() {
-        //scantxt.setText("");
         scantxt.getText().clear();
-
     }
 
+// Defect Button
     private void defect() {
         Intent send = new Intent(BarcodeScan.this, Defect_list.class);
         send.putExtra("KEY_SENDER", scantxt.getText().toString());
         startActivity(send);
-
         progress();
     }
 
+
+// Clear Rework Stored Procedure while scanning the vin number
     public void clear_reworkbay_sp(){
 
         try {
@@ -200,7 +212,7 @@ public class BarcodeScan extends AppCompatActivity {
             preparedStatement.close();
 
         } catch (Exception e) {
-            Log.e("msg","ERRORE");
+            Log.e("msg","ERROR");
 
         }
     }

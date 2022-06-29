@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -82,7 +78,7 @@
                 android:src="@drawable/userid" />
 
             <EditText
-                android:id="@+id/mainEmail"
+                android:id="@+id/userid"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -90,7 +86,7 @@
                 android:autofillHints="emailAddress"
                 android:background="@null"
                 android:ems="10"
-                android:hint="Enter your email...."
+                android:hint="Enter your User ID...."
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 app:startIconContentDescription="Login ID"
@@ -114,7 +110,7 @@
                 android:src="@drawable/password" />
 
             <EditText
-                android:id="@+id/mainPassword"
+                android:id="@+id/password"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -138,5 +134,20 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="#EA6D00" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temp"
+            android:text="Temp Login"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/templogin"
+            android:text="Login"/>
+
+
     </LinearLayout>
+
+
 </ScrollView>

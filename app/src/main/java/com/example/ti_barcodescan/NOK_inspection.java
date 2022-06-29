@@ -52,13 +52,13 @@ public class NOK_inspection extends AppCompatActivity {
         //vin textview
         vin = findViewById(R.id.vin_nok);
 
-
+// Second Drop Down
         spinner_2  =(Spinner) findViewById(R.id.spinner_2);
        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rework, android.R.layout.simple_spinner_item);
        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
        spinner_2.setAdapter(adapter);
 
-
+// Receiving the Intent from other activity (TextViews)
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             String vinno = bundle.getString("vinno");
@@ -72,6 +72,8 @@ public class NOK_inspection extends AppCompatActivity {
         FillSpinner();
 
 
+
+// Fetching InspectionID DefectID and ReworkTypeID while TextChange
         remark.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -90,7 +92,7 @@ public class NOK_inspection extends AppCompatActivity {
             }
         });
 
-
+// Executing AsyncTask class on Button CLick
         save = findViewById(R.id.save);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,7 +134,7 @@ public class NOK_inspection extends AppCompatActivity {
     }
 
 
-
+// Fetching and Adding Defect Names in DropDown
     public void FillSpinner() {
 
 
@@ -165,6 +167,7 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
+    //Fetching ReworkTypeID, InspectiontID, DefectID from Database and adding it to Textview
     public void get_info() {
 
         try {
@@ -196,6 +199,7 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
+// Insert Query method to save the Defects into DefectLog
     public void insert() {
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
@@ -212,7 +216,7 @@ public class NOK_inspection extends AppCompatActivity {
         }
 
     }
-
+// Progress Dialog
     public void progress(){
         progressDialog = new ProgressDialog(NOK_inspection.this);
         progressDialog.show();
@@ -229,13 +233,23 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
-
+// Assign Rework Bay Stored Procedure Method
     public void Assign_reworkbay_sp(){
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
-
-            String query_3 = "Exec [dbo].[AssignReworkBay] '"+vin.getText().toString()+"', '"+reworktype_id.getText().toString()+"'";
+            String ReworkTypeAsString = spinner_2.getSelectedItem().toString();
+            int ReworkType;
+            if (ReworkTypeAsString.equals("Electrical"))
+                ReworkType = 1;
+            else if (ReworkTypeAsString.equals("Mechanical"))
+                ReworkType = 2;
+            else if (ReworkTypeAsString.equals("Paint"))
+                ReworkType = 3;
+            else
+                ReworkType = 4;
+            String query_3 = "Exec [dbo].[AssignReworkBay] '"+vin.getText().toString()+"',"+ReworkType;
+                    //"'"+reworktype_id.getText().toString()+"'";
             PreparedStatement preparedStatement = connect.prepareStatement(query_3);
             preparedStatement.executeUpdate();
             preparedStatement.close();
@@ -248,7 +262,7 @@ public class NOK_inspection extends AppCompatActivity {
     }
 
 
-
+// AsyncTask Class to execute insert method and Stored Procedure
     private class  SaveToDefectLog extends AsyncTask<String, Void, String> {
 
         @Override

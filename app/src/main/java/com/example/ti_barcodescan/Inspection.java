@@ -26,9 +26,6 @@ public class Inspection extends AppCompatActivity {
     SaveToDatabase saveToDatabase;
     Connection connect;
 
-
-
-
     Switch nok_1, nok_2, nok_3, nok_4, nok_5, nok_6, nok_7, nok_8, nok_9, nok_10, nok_11, nok_12, nok_13, nok_14, nok_15, nok_16, nok_17, nok_18, nok_19, nok_20, nok_21, nok_22, nok_23, nok_24, nok_25, nok_26, nok_27, nok_28, nok_29, nok_30,
          nok_31, nok_32, nok_33, nok_34, nok_35, nok_36, nok_37, nok_38, nok_39, nok_40, nok_41, nok_42, nok_43, nok_44, nok_45, nok_46, nok_47, nok_48, nok_49, nok_50, nok_51, nok_52, nok_53, nok_54,
          nok_55, nok_56, nok_57, nok_58, nok_59, nok_60, nok_61, nok_62, nok_63, nok_64, nok_65, nok_66, nok_67, nok_68;
@@ -1118,7 +1115,7 @@ public class Inspection extends AppCompatActivity {
 
 
     }
-
+// Progress Dialog
     public void progress(){
         progressDialog = new ProgressDialog(Inspection.this);
         progressDialog.show();
@@ -1135,9 +1132,7 @@ public class Inspection extends AppCompatActivity {
 
     }
 
-public void save(){
 
-}
     //home button
     private void home() {
         Intent send = new Intent(Inspection.this, BarcodeScan.class);
@@ -1147,7 +1142,7 @@ public void save(){
 
 
 
-
+// Save Methods to Insert all the Inspections into Database
     public void save_1(){
         nok_1.setTextOn("2");
         nok_1.setTextOff("1");
@@ -2971,19 +2966,7 @@ public void save_14(){
         }
 
     }
-//
-//    public void click(){
-//
-//        for (int i = 0; i < 7; i++) {
-//            int id = getResources().getIdentifier("button_"+i, "id", getPackageName());
-//            ok_1[i] = (Button) findViewById(id);
-//        }
-//
-//        if(ok_1.isSelected()){
-//            ok_1.setText("1");
-//        }
-//    }
-//
+// Progress Dialog (Loading...)
 public void progress_2(){
     progressDialog = new ProgressDialog(Inspection.this);
     progressDialog.show();
@@ -3001,7 +2984,7 @@ public void progress_2(){
 }
 
 
-    //No_ok inspection 1
+    //ALl No_Ok Switch Click
     private void nok_inspec_1() {
 
         String vinno = vin.getText().toString().trim();
@@ -3823,6 +3806,7 @@ public void progress_2(){
         progress_2();
     }
 
+    // AsyncTask private class to execute all the save methods and progress dialog
     private class  SaveToDatabase extends AsyncTask<String, Void, String> {
 
         @Override

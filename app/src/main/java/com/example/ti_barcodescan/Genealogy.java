@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -36,8 +35,6 @@ public class Genealogy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_genealogy);
 
         //Date and Time
@@ -82,7 +79,7 @@ public class Genealogy extends AppCompatActivity {
         });
 
         as = findViewById(R.id.as);
-      /*  as.setOnClickListener(new View.OnClickListener() {
+      /* as.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 GetList();

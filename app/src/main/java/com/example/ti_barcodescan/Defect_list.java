@@ -79,6 +79,8 @@ public class Defect_list extends AppCompatActivity {
         };
         t.start();
 
+
+// Home Button OnClick
         home_btn_dft = findViewById(R.id.home_btn_dft);
         home_btn_dft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +89,7 @@ public class Defect_list extends AppCompatActivity {
             }
         });
 
-
+// Auto Click
         ListAdapter adap = GetdefectList();
         click = findViewById(R.id.click);
 
@@ -102,7 +104,7 @@ public class Defect_list extends AppCompatActivity {
 
     }
 
-
+// Home Button
     private void home() {
         Intent send = new Intent(Defect_list.this, BarcodeScan.class);
         send.putExtra("KEY_SEND", vin.getText().toString());
@@ -110,7 +112,7 @@ public class Defect_list extends AppCompatActivity {
 
     }
 
-
+// Adding Table Columns in List View, Removing the list when clicked clear button and Updating the Database
     public ListAdapter GetdefectList() {
         ArrayList<Integer> pos = new ArrayList<>();
 
@@ -121,16 +123,11 @@ public class Defect_list extends AppCompatActivity {
         int[] i = {R.id.dcol_1, R.id.dcol_2, R.id.dcol_3, R.id.clear_1};
         SimpleAdapter ad;
         final int[] popo = {0};
-//         ad = new SimpleAdapter(Defect_list.this, MyDataList, R.layout.listview_defect, f, i);
         ad = new SimpleAdapter(this, MyDataList, R.layout.listview_defect, f, i) {
-
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View v = super.getView(position, convertView, parent);
-               // clear = v.findViewById(R.id.clear);
-               // clear.setOnClickListener(arg0 -> {
-
                 clear = v.findViewById(R.id.clear_1);
                 clear.setText("Clear");
                 clear.setOnClickListener(arg0 -> {
@@ -155,8 +152,8 @@ public class Defect_list extends AppCompatActivity {
     }
 
 
+//Fetching Table Columns from the Database
     public List<Map<String, String>> getdefectlist() {
-
 
         List<Map<String, String>> data = null;
         data = new ArrayList<Map<String, String>>();
@@ -190,6 +187,7 @@ public class Defect_list extends AppCompatActivity {
 
     }
 
+    //Clear Button Method
     public Boolean clear_defects(String Query) {
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
@@ -198,12 +196,7 @@ public class Defect_list extends AppCompatActivity {
             String sqlinsert = Query;
             Statement st = connect.createStatement();
             boolean rs = st.execute(sqlinsert);
-
             return rs;
-//            String query_3 = Query;
-//            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
-//            preparedStatement.executeUpdate();
-//            preparedStatement.close();
 
         } catch (Exception e) {
 

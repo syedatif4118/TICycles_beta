@@ -15,9 +15,12 @@ public class ConnectionHelper {
 
     public Connection connectionClass() {
        // ip = "192.168.0.108";
-        ip = "192.168.119.57";
-        uname = "atif";
-        pass = "atif";
+       // ip = "192.168.174.57";
+        ip = "10.0.23.81";
+        uname = "TIMES";
+        pass = "TIMES@123";
+       // uname = "atif";
+       // pass = "atif";
         port = "1433";
         database = "TI3WEV_MES";
 
