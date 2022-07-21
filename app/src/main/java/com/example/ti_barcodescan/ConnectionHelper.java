@@ -14,14 +14,14 @@ public class ConnectionHelper {
     @SuppressLint("NewApi")
 
     public Connection connectionClass() {
-        ip = "192.168.0.108";
+      //  ip = "192.168.0.108";
       // ip = "192.168.174.57";
-        uname = "atif";
-        pass = "atif";
+       //uname = "atif";
+       // pass = "atif";
 
-      /* ip = "10.0.23.81";
+       ip = "10.0.23.81";
         uname = "TIMES";
-        pass = "TIMES@123";*/
+        pass = "TIMES@123";
         port = "1433";
         database = "TI3WEV_MES";
 

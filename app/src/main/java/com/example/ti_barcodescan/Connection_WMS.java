@@ -20,14 +20,14 @@ public Connection wms_connectionClass()
         pass = "atif";
         port = "1433";*/
 
-        wms_ip = "192.168.0.108";
-        wms_ip = "192.168.174.57";
-        wms_uname = "atif";
-        wms_pass = "atif";
+      //  wms_ip = "192.168.0.108";
+       // wms_ip = "192.168.174.57";
+       // wms_uname = "atif";
+       // wms_pass = "atif";
 
-      /* wms_ip = "10.0.23.81";
+       wms_ip = "10.0.23.81";
         wms_uname = "WMSUSer";
-        wms_pass = "MESWMS@123";*/
+        wms_pass = "MESWMS@123";
         wms_port = "1433";
         wms_database = "WMSInterface";
 
