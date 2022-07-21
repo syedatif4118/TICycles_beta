@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -26,15 +27,13 @@ public class Genealogy extends AppCompatActivity {
     Button home_btn_gen, as;
     TextView Gdate, vin, textView;
     SimpleAdapter ad;
-
     Connection connect;
-    String ConnectionResult = "";
-    Boolean isSuccess = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_genealogy);
 
         //Date and Time
@@ -63,11 +62,13 @@ public class Genealogy extends AppCompatActivity {
         };
         t.start();
 
+
         // vin number textview
         vin = findViewById(R.id.vin);
         Intent receive = getIntent();
         String receiveValue = receive.getStringExtra("KEY_SENDER");
         vin.setText(receiveValue);
+
 
         //Home Button
         home_btn_gen = findViewById(R.id.home_btn);
@@ -78,6 +79,8 @@ public class Genealogy extends AppCompatActivity {
             }
         });
 
+
+
         as = findViewById(R.id.as);
       /* as.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +88,8 @@ public class Genealogy extends AppCompatActivity {
                 GetList();
             }
         });*/
+
+        // Calling List Adapter
         ListAdapter adap = GetList();
 
 
@@ -98,15 +103,16 @@ public class Genealogy extends AppCompatActivity {
 
 
     }
-
+// Home Button
     private void home() {
-        Intent send = new Intent(Genealogy.this, BarcodeScan.class);
-        send.putExtra("KEY_SEND", vin.getText().toString());
-        startActivity(send);
-
+       // Intent send = new Intent(Genealogy.this, BarcodeScan.class);
+        //send.putExtra("KEY_SEND", vin.getText().toString());
+        //startActivity(send);
+        onBackPressed();
     }
 
 
+// Adding Genalogy Table columns to List View
     public ListAdapter GetList() {
         ListView listView = (ListView) findViewById(R.id.list);
         List<Map<String, String>> MyDataList = getlist();
@@ -114,42 +120,39 @@ public class Genealogy extends AppCompatActivity {
         //MyDataList = mydata.getlist();
         //  MyDataList.get(getlist());
 
-        String[] f = {"ActivityId", "Activity_Name", "Activity_Value", "Status"};
-        int[] i = {R.id.col_1, R.id.col_2, R.id.col_3, R.id.col_4};
+        String[] f = {"Activity_Name", "Activity_Value", "Status"};
+        int[] i = { R.id.col_2, R.id.col_3, R.id.col_4};
         ad = new SimpleAdapter(Genealogy.this, MyDataList, R.layout.list_genealogy, f, i);
         listView.setAdapter(ad);
 
         return null;
     }
 
+
+
+    // Fetching the Genealogy Table from the Database
     public List<Map<String, String>> getlist() {
 
 
         List<Map<String, String>> data = null;
         data = new ArrayList<Map<String, String>>();
         try {
-
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
             if (connect != null) {
-                String query = "select * from Genealogy where Serial_No ='" + vin.getText().toString() + "'";
+                String query = "select Timestamp,Serial_No,ActivityId,ActivityName,ActivityValue,Case when Status =1 then 'OK' else 'NOK' end as Status from Genealogy where Serial_No ='" + vin.getText().toString() + "'";
                 //String query = "select * from Genealogy";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
                 while (rs.next()) {
                     Map<String, String> dtname = new HashMap<String, String>();
-                    dtname.put("ActivityId", rs.getString(4));
-                    dtname.put("Activity_Name", rs.getString(5));
-                    dtname.put("Activity_Value", rs.getString(6));
-                    dtname.put("Status", rs.getString(7));
+                   // dtname.put("ActivityId", rs.getString(4));
+                    dtname.put("Activity_Name", rs.getString("ActivityName"));
+                    dtname.put("Activity_Value", rs.getString("ActivityValue"));
+                    dtname.put("Status", rs.getString("Status"));
                     data.add(dtname);
-
-
                 }
-
-
             }
-
 
         } catch (Exception ex) {
 

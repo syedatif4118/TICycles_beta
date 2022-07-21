@@ -10,6 +10,7 @@
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/drop_outline.xml" value="0.145" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1945" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/ic_delete.xml" value="0.145" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/icon.xml" value="0.187" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/spinner_border.xml" value="0.1945" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/textholder.xml" value="0.1945" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/drawable/thump.xml" value="0.145" />
@@ -19,11 +20,12 @@
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_defect_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_genealogy.xml" value="0.25" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_geneology.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_inspection.xml" value="0.15" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_inspection.xml" value="0.25" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/activity_nok_inspection.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/fragment_first.xml" value="0.16" />
+        <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/inspection_listview.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/layout_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/list_genealogy.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Atif/AndroidStudioProjects/TI_BarcodeScan/app/src/main/res/layout/listview_defect.xml" value="0.20416666666666666" />

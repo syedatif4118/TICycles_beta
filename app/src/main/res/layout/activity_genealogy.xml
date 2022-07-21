@@ -121,15 +121,7 @@
                     android:id="@+id/table_row1"
                     android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/name"
-                        android:fontFamily="serif"
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:textColor="#000"
-                        android:gravity="center"
-                        android:text="Activity ID"/>
+
                     <TextView
                         android:id="@+id/age"
                         android:textColor="#000"

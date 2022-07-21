@@ -7,23 +7,29 @@ import android.util.Log;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class ConnectionHelper {
+public class Connection_WMS {
     Connection con;
-    String uname, pass, database, port, ip;
+    String wms_uname, wms_pass, wms_database, wms_port, wms_ip;
 
     @SuppressLint("NewApi")
+public Connection wms_connectionClass()
 
-    public Connection connectionClass() {
-        ip = "192.168.0.108";
-      // ip = "192.168.174.57";
+    {
+      /*  ip = "192.168.174.57";
         uname = "atif";
         pass = "atif";
+        port = "1433";*/
 
-      /* ip = "10.0.23.81";
-        uname = "TIMES";
-        pass = "TIMES@123";*/
-        port = "1433";
-        database = "TI3WEV_MES";
+        wms_ip = "192.168.0.108";
+        wms_ip = "192.168.174.57";
+        wms_uname = "atif";
+        wms_pass = "atif";
+
+      /* wms_ip = "10.0.23.81";
+        wms_uname = "WMSUSer";
+        wms_pass = "MESWMS@123";*/
+        wms_port = "1433";
+        wms_database = "WMSInterface";
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -33,7 +39,7 @@ public class ConnectionHelper {
         try {
 
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            ConnectionURL = "jdbc:jtds:sqlserver://" + ip + ":" + port + ";" + "databasename=" + database + ";user=" + uname + ";password=" + pass + ";";
+            ConnectionURL = "jdbc:jtds:sqlserver://" + wms_ip + ":" + wms_port + ";" + "databasename=" + wms_database + ";user=" + wms_uname + ";password=" + wms_pass + ";";
             connection = DriverManager.getConnection(ConnectionURL);
         } catch (Exception ex) {
             Log.e("Error", ex.getMessage());
@@ -45,5 +51,6 @@ public class ConnectionHelper {
 
 
     }
+
 
 }

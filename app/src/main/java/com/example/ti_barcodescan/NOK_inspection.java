@@ -1,6 +1,7 @@
 package com.example.ti_barcodescan;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Connection;
@@ -27,8 +29,8 @@ import java.util.ArrayList;
 
 public class NOK_inspection extends AppCompatActivity {
     Button save, info;
-    TextView date, vin, inspection_name, inspec_id, defect_id,reworktype_id;
-    Spinner spinner,spinner_2;
+    TextView date, vin, inspection_name, inspec_id, defect_id, reworktype_id;
+    Spinner spinner, spinner_2;
     Connection connect;
     EditText remark;
     SaveToDefectLog saveToDefectLog;
@@ -53,10 +55,10 @@ public class NOK_inspection extends AppCompatActivity {
         vin = findViewById(R.id.vin_nok);
 
 // Second Drop Down
-        spinner_2  =(Spinner) findViewById(R.id.spinner_2);
-       ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.rework, android.R.layout.simple_spinner_item);
-       adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-       spinner_2.setAdapter(adapter);
+        spinner_2 = (Spinner) findViewById(R.id.spinner_2);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.rework, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_2.setAdapter(adapter);
 
 // Receiving the Intent from other activity (TextViews)
         Bundle bundle = getIntent().getExtras();
@@ -70,7 +72,6 @@ public class NOK_inspection extends AppCompatActivity {
         //DropDown
         spinner = findViewById(R.id.spinner);
         FillSpinner();
-
 
 
 // Fetching InspectionID DefectID and ReworkTypeID while TextChange
@@ -87,7 +88,7 @@ public class NOK_inspection extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                get_info();
+               // get_info();
 
             }
         });
@@ -97,9 +98,11 @@ public class NOK_inspection extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 saveToDefectLog = new SaveToDefectLog();
                 saveToDefectLog.execute();
-                Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_SHORT).show();
+
+
             }
 
         });
@@ -134,10 +137,8 @@ public class NOK_inspection extends AppCompatActivity {
     }
 
 
-// Fetching and Adding Defect Names in DropDown
+    // Fetching and Adding Defect Names in DropDown
     public void FillSpinner() {
-
-
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
@@ -167,6 +168,7 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
+
     //Fetching ReworkTypeID, InspectiontID, DefectID from Database and adding it to Textview
     public void get_info() {
 
@@ -174,8 +176,8 @@ public class NOK_inspection extends AppCompatActivity {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
             if (connect != null) {
-                String query_1 = "select * from Rework_Type where ReworkTypeName ='"+spinner_2.getSelectedItem().toString()+"'";
-                String query_2 = "select * from Config_Defect where DefectName ='" + spinner.getSelectedItem().toString() + "'";
+                String query_1 = "select * from Rework_Type where ReworkTypeName ='" + spinner_2.getSelectedItem().toString() + "'";
+                String query_2 = "select InspectionId,DefectId from Config_Defect where DefectName ='" + spinner.getSelectedItem().toString() + "'";
 
                 Statement st_1 = connect.createStatement();
                 ResultSet rs_1 = st_1.executeQuery(query_1);
@@ -183,7 +185,7 @@ public class NOK_inspection extends AppCompatActivity {
                 Statement st_2 = connect.createStatement();
                 ResultSet rs_2 = st_2.executeQuery(query_2);
 
-                while(rs_1.next()){
+                while (rs_1.next()) {
                     reworktype_id.setText(rs_1.getString(1));
                 }
 
@@ -199,25 +201,56 @@ public class NOK_inspection extends AppCompatActivity {
 
     }
 
-// Insert Query method to save the Defects into DefectLog
+
+    // Insert Query method to save the Defects into DefectLog
     public void insert() {
+
+        if (remark.getText().toString().trim().length() > 0) {
         try {
+
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
 
-            String query_3 = "insert into DefectLog (LogTimestamp,Serial_No,InspectionId,DefectId,Status,Remarks,LastUpdatedOn) values(getdate(),'" + vin.getText() + "','" + inspec_id.getText() + "','" + defect_id.getText() + "',2,'" + remark.getText() + "',getdate())";
-            PreparedStatement preparedStatement = connect.prepareStatement(query_3);
-            preparedStatement.executeUpdate();
-            preparedStatement.close();
 
-        } catch (Exception e) {
+             String query_3 = "Exec Inspection2DefectLog '"+vin.getText().toString()+"','"+inspection_name.getText().toString()+"','"+spinner.getSelectedItem().toString()+"','"+remark.getText().toString()+"'";
+            // String query_3 = "insert into DefectLog (LogTimestamp,Serial_No,InspectionId,DefectId,Status,Remarks,LastUpdatedOn) values(getdate(),'" + vin.getText() + "','" + inspec_id.getText() + "','" + defect_id.getText() + "',2,'" + remark.getText() + "',getdate())";
+                PreparedStatement preparedStatement = connect.prepareStatement(query_3);
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+               // Log.e("h",query_3.toString());
+            Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_SHORT).show();
+            onBackPressed();
+
+            }
 
 
+            catch(Exception e){
+                Log.e("here","Error in DefectLog");
+
+            }
         }
 
+        else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(NOK_inspection.this);
+            builder.setMessage("Enter Remark before saving").
+                    setCancelable(true).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            }).setTitle("Alert!")
+                    .setIcon(R.drawable.warning);
+            AlertDialog alert = builder.create();
+           // alert.show();
+            builder.show();
+        }
     }
-// Progress Dialog
-    public void progress(){
+
+
+
+
+    // Progress Dialog
+    public void progress() {
         progressDialog = new ProgressDialog(NOK_inspection.this);
         progressDialog.show();
         progressDialog.setContentView(R.layout.progress_dialog);
@@ -229,12 +262,12 @@ public class NOK_inspection extends AppCompatActivity {
             public void run() {
                 progressDialog.dismiss();
             }
-        }, 3000);
+        }, 1000);
 
     }
 
-// Assign Rework Bay Stored Procedure Method
-    public void Assign_reworkbay_sp(){
+    // Assign Rework Bay Stored Procedure Method
+    public void Assign_reworkbay_sp() {
         try {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
@@ -248,22 +281,24 @@ public class NOK_inspection extends AppCompatActivity {
                 ReworkType = 3;
             else
                 ReworkType = 4;
-            String query_3 = "Exec [dbo].[AssignReworkBay] '"+vin.getText().toString()+"',"+ReworkType;
-                    //"'"+reworktype_id.getText().toString()+"'";
+            String query_3 = "Exec [dbo].[AssignReworkBay] '" + vin.getText().toString() + "'," + ReworkType;
+            //"'"+reworktype_id.getText().toString()+"'";
             PreparedStatement preparedStatement = connect.prepareStatement(query_3);
             preparedStatement.executeUpdate();
             preparedStatement.close();
 
         } catch (Exception e) {
-            Log.e("msg","ERRORE");
+            Log.e("msg", "ERRORE");
 
         }
 
     }
 
 
-// AsyncTask Class to execute insert method and Stored Procedure
-    private class  SaveToDefectLog extends AsyncTask<String, Void, String> {
+
+
+    // AsyncTask Class to execute insert method and Stored Procedure
+    private class SaveToDefectLog extends AsyncTask<String, Void, String> {
 
         @Override
         protected void onPreExecute() {
@@ -275,10 +310,12 @@ public class NOK_inspection extends AppCompatActivity {
         protected String doInBackground(String... params) {
 
 
-            return null; }
+            return null;
+        }
 
         @Override
         protected void onPostExecute(String result) {
+          //duplic_save();
             insert();
             Assign_reworkbay_sp();
 
@@ -287,6 +324,51 @@ public class NOK_inspection extends AppCompatActivity {
 
 
 
+
+    public void duplic_save(){
+        try {
+            ConnectionHelper connectionHelper = new ConnectionHelper();
+            connect = connectionHelper.connectionClass();
+            if (connect != null) {
+
+                String query = "select count(*) from DefectLog as Dlog join Config_Defect as Defect on Dlog.DefectId = Defect.DefectId  where Serial_No = '"+vin.getText().toString()+"' and DefectName = '"+spinner.getSelectedItem().toString()+"' and Status = 2";
+                Statement st_1 = connect.createStatement();
+                ResultSet rs_1 = st_1.executeQuery(query);
+
+
+                rs_1.next();
+                int count = rs_1.getInt(1);
+                rs_1.close();
+
+                if(count>1){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(NOK_inspection.this);
+                    builder.setMessage("Defect already saved").
+                            setCancelable(true).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    }).setTitle("Alert!")
+                            .setIcon(R.drawable.warning);
+                    AlertDialog alert = builder.create();
+                   // alert.show();
+                    builder.show();
+
+                }
+                else{
+                    insert();
+
+                }
+
+
+            }
+        } catch (Exception e) {
+
+        }
+
+
+
+    }
 
 
 }

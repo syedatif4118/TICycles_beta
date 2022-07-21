@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:textSize="17dp"
+        android:layout_weight="0.8"
+        android:id="@+id/inspec_list_name"
+        />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.02"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"/>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nok_1"
+        android:layout_marginTop="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:thumbTint="@color/ok_button_color"
+        android:trackTint="@color/nok_button_color"
+        android:focusable="false"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="NOK"
+        android:textSize="17dp"
+        android:layout_weight="0.02"/>
+
+
+
+</LinearLayout>
+

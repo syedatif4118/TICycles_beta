@@ -3,7 +3,6 @@ package com.example.ti_barcodescan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -91,6 +90,7 @@ public class Defect_list extends AppCompatActivity {
 
 // Auto Click
         ListAdapter adap = GetdefectList();
+
         click = findViewById(R.id.click);
 
         new Handler().postDelayed(new Runnable() {
@@ -104,7 +104,7 @@ public class Defect_list extends AppCompatActivity {
 
     }
 
-// Home Button
+    // Home Button
     private void home() {
         Intent send = new Intent(Defect_list.this, BarcodeScan.class);
         send.putExtra("KEY_SEND", vin.getText().toString());
@@ -112,15 +112,15 @@ public class Defect_list extends AppCompatActivity {
 
     }
 
-// Adding Table Columns in List View, Removing the list when clicked clear button and Updating the Database
+    // Adding Table Columns in List View, Removing the list when clicked clear button and Updating the Database
     public ListAdapter GetdefectList() {
         ArrayList<Integer> pos = new ArrayList<>();
 
         ListView listView = (ListView) findViewById(R.id.defect_listview);
         List<Map<String, String>> MyDataList = getdefectlist();
 
-        String[] f = {"ActivityId", "Activity_Name", "Activity_Value", "Button"};
-        int[] i = {R.id.dcol_1, R.id.dcol_2, R.id.dcol_3, R.id.clear_1};
+        String[] f = {"Defect_Id", "Defect_Name","Remarks","Button"};
+        int[] i = {R.id.dcol_3, R.id.dcol_1,R.id.dcol_2, R.id.clear_1};
         SimpleAdapter ad;
         final int[] popo = {0};
         ad = new SimpleAdapter(this, MyDataList, R.layout.listview_defect, f, i) {
@@ -134,10 +134,10 @@ public class Defect_list extends AppCompatActivity {
                     // TODO Auto-generated method stub
                     ListAdapter add = listView.getAdapter();
                     listView.setAdapter(add);
-                        Log.e("here", MyDataList.get(position).get("Activity_Name"));
-                        String d = MyDataList.get(position).get("Activity_Name");
-                        Boolean j = clear_defects("Update DefectLog set Status = 1 where DefectId =" + d + "");
-                        MyDataList.remove(position);
+                 //   Log.e("here", MyDataList.get(position).get("Activity_Name"));
+                    String d = MyDataList.get(position).get("Defect_Id");
+                    Boolean j = clear_defects("Update DefectLog set Status = 1 where DefectId =" + d + "");
+                    MyDataList.remove(position);
                     Toast.makeText(Defect_list.this, "Cleared", Toast.LENGTH_SHORT).show();
                 });
 
@@ -152,7 +152,7 @@ public class Defect_list extends AppCompatActivity {
     }
 
 
-//Fetching Table Columns from the Database
+    //Fetching Table Columns from the Database
     public List<Map<String, String>> getdefectlist() {
 
         List<Map<String, String>> data = null;
@@ -162,14 +162,15 @@ public class Defect_list extends AppCompatActivity {
             ConnectionHelper connectionHelper = new ConnectionHelper();
             connect = connectionHelper.connectionClass();
             if (connect != null) {
-                String query = "select * from DefectLog where Serial_No ='" + vin.getText().toString() + "' and Status = 2";
+                //String query = "select * from DefectLog where Serial_No ='" + vin.getText().toString() + "' and Status = 2";
+                String query = "select * from Config_Defect as Defect join DefectLog as DLog on Defect.DefectId = DLog.DefectId where DLog.Serial_No = '"+vin.getText().toString()+"' and Status =2";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
                 while (rs.next()) {
                     Map<String, String> dtname = new HashMap<String, String>();
-                    dtname.put("ActivityId", rs.getString(4));
-                    dtname.put("Activity_Name", rs.getString(5));
-                    dtname.put("Activity_Value", rs.getString(7));
+                    dtname.put("Defect_Name", rs.getString("DefectName"));
+                    dtname.put("Remarks", rs.getString("Remarks"));
+                    dtname.put("Defect_Id", rs.getString("DefectId"));
 
                     data.add(dtname);
 

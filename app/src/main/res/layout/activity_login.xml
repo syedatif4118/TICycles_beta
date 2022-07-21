@@ -135,16 +135,11 @@
             android:textStyle="bold"
             app:backgroundTint="#EA6D00" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/temp"
-            android:text="Temp Login"/>
-        <Button
+        <!--<Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/templogin"
-            android:text="Login"/>
+            android:text="Login"/>-->
 
 
     </LinearLayout>

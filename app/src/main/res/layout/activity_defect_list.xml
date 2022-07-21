@@ -137,16 +137,8 @@
                     android:layout_weight="1"
                     android:textColor="#000"
                     android:gravity="center"
-                    android:text="Inspection ID"/>
-                <TextView
-                    android:id="@+id/age"
-                    android:textColor="#000"
-                    android:fontFamily="serif"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="Defect ID"
-                    android:gravity="center"/>
+                    android:text="Defect Name"/>
+
                 <TextView
                     android:textColor="#000"
                     android:id="@+id/position"
@@ -154,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
-                    android:text="Remark"
+                    android:text="Remarks"
                     android:gravity="center"/>
 
 
@@ -169,13 +161,11 @@
 </LinearLayout>
         <Button
             android:id="@+id/click"
-
             android:layout_width="1dp"
             android:layout_height="1dp" />
 
         <ListView
             android:id="@+id/defect_listview"
-
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
